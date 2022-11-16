@@ -1,26 +1,38 @@
 
-var adress = {
-    adress1: { adressName: "28 rue Jean Baptiste Leclerc", longitude: 2.42957, Country: "France", timezone: 1 },
-    adress2: { adressName: "15 Rue Neuve", longitude: 4.35456, Country: "Belgium", timezone: 1 },
-    adress3: { adressName: "Allée George Charpak", longitude: 2.07118, Country: "France", timezone: 1 }
+var address = {
+    address1: { addressName: "28 rue Jean Baptiste Leclerc", longitude: 2.42957, Country: "France", timezone: 1 },
+    address2: { addressName: "15 Rue Neuve", longitude: 4.35456, Country: "Belgium", timezone: 1 },
+    address3: { addressName: "Allée George Charpak", longitude: 2.07118, Country: "France", timezone: 1 }
 };
 
 function Search(input) {
     if (!input) {
-        alert('please, enter a location in this format : "Adress, Country "')
+        alert('Please, enter a location in this format : "address, country "')
     } else {
-        for (const location in adress) {
-            if (input == adress[location].adressName) {
+        for (const location in address) {
+            var name=input.split(", ")[0]
+            var country=input.split(", ")[1]
+            
+            if (name == address[location].addressName && country ==address[location].Country) {
                 setInterval(function () {
-                    var time = SolarTime(adress[location].longitude, adress[location].timezone)
-                    document.getElementById("test").innerHTML = time[0] + "h : " + time[1] + "m : " + time[2] + "s"
+                    var time = SolarTime(address[location].longitude, address[location].timezone)
+                    var RemainingTime = SantArrival(address[location].longitude, address[location].timezone)
+                    document.getElementById("time").innerHTML = time[0] + "h : " + time[1] + "m : " + time[2] + "s"
+                    document.getElementById("remaining").innerHTML =RemainingTime[0]+" days "+ RemainingTime[1] + "h : " + RemainingTime[2] + "m : " + RemainingTime[3] + "s"
                 }, 1000)
-
             }
+        }
+        if(document.getElementById('time').innerHTML=="HH, MM, SS"){
+            alert("Incorrect or unknown adress, please, enter a location in this format : address, country")
         }
     }
 }
-
+var input = document.getElementById("input");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    Search(input.value)
+  }
+});
 function getFractYear() {
     var fractYear;
     var now = new Date();
@@ -47,22 +59,17 @@ function SolarTime(longitude, timezone) {
     var tsts = parseInt((tst - tstm - (tsth * 60)) * 60)
     return [tsth, tstm, tsts]
 }
-function SantArrival(pos) {
-    var fractYear = getFractYear()
-    var crd = pos.coords
-    var eqtime = 229.18 * (0.000075 + (0.001868 * Math.cos(fractYear)) - (0.032077 * Math.sin(fractYear)) - (0.014615 * Math.cos(2 * fractYear)) - (0.040849 * Math.sin(2 * fractYear)));
-    time_offset = eqtime + 4 * crd.longitude - 60
-    year = new Date()
-    date = new Date(year.getFullYear(), 11, 25, 0, 0, 0)
+function SantArrival(longitude, timezone) {
+    var st=SolarTime(longitude,timezone)
+    var hours= 24-(st[0])
+    var minutes= 60 - st[1]
+    var seconds= 60-st[2]
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    var day = Math.floor((now - start) / 1000 / 60 / 60 / 24);
+    day = 358-day
+    
+    return [day, hours, minutes, seconds]
 
-    tst = date.getHours() * 60 + date.getMinutes() + date.getSeconds() / 60 + time_offset
-    var tsth = parseInt(tst / 60)
-    var tstm = parseInt(tst - (tsth * 60))
-    var tsts = parseInt((tst - tstm - (tsth * 60)) * 60)
-    var array = new Array(3);
-    array[0] = tsth
-    array[1] = tstm
-    array[2] = tsts
-    return array
 }
 
