@@ -1,18 +1,14 @@
 <hr>
 
-<p align="center">
-
-<p style="text-align: center; font-weight: bold; font-size: 21px"> santaclock.algosup.com </p>
-<p style="text-align: center; font-weight: bold; font-size: 18px"> Functional Specification</p>
+<p align="center" style="font-weight: bold; font-size: 21px"> santaclock.algosup.com </p>
+<p align="center" style="font-weight: bold; font-size: 18px"> Functional Specification</p>
 <br>
-<p style="text-align: center;"> Clémentine Curel</p>
-<p style="text-align: center;"> Last Updated: November 14, 2022</p>
+<p align="center"> Clémentine Curel</p>
+<p align="center"> Last Updated: November 14, 2022</p>
 <br>
-<p style="text-align: center; font-weight: bold"> – C O N F I D E N T I A L –</p>
+<p align="center" style="font-weight: bold"> – C O N F I D E N T I A L –</p>
 
-<p style="text-align: center;"> ALGOSUP, Group 6. All Rights Reserved. </p>
-
-</p>
+<p align="center"> ALGOSUP, Group 6. All Rights Reserved. </p>
 
 <hr>
 
