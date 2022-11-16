@@ -1,5 +1,7 @@
 <hr>
 
+<p align="center">
+
 <p style="text-align: center; font-weight: bold; font-size: 21px"> santaclock.algosup.com </p>
 <p style="text-align: center; font-weight: bold; font-size: 18px"> Functional Specification</p>
 <br>
@@ -9,6 +11,8 @@
 <p style="text-align: center; font-weight: bold"> – C O N F I D E N T I A L –</p>
 
 <p style="text-align: center;"> ALGOSUP, Group 6. All Rights Reserved. </p>
+
+</p>
 
 <hr>
 
@@ -135,7 +139,6 @@ days   hours   minutes   seconds
 
 <br>
 
-20 user minimum to thousand of them
 
 Display the precise time when Santa clause will be at the user's location
 - Put an input for the user to enter his postal adress and thus be able to have the most accurate prediction
