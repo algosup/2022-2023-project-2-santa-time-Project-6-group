@@ -99,6 +99,8 @@ Seeing that a lot of people are on this website at the same time, Carl saw that 
 
 # Non Goals
 
+save the position / the input
+
 good design
 
 world's map
@@ -135,7 +137,6 @@ days   hours   minutes   seconds
 
 20 user minimum to thousand of them
 
-splash screen ?
 Display the precise time when Santa clause will be at the user's location
 - Put an input for the user to enter his postal adress and thus be able to have the most accurate prediction
 - Display the location of Santa clause on a map
@@ -145,7 +146,7 @@ Display the precise time when Santa clause will be at the user's location
 
 " 00: 00: 00: 00 " precisely when the sun will be at the exact opposite of this coordinates.
 
-what append at 00:00 ?
+what append at 00:00 ? 
 
 errors pages
 
@@ -166,12 +167,11 @@ We will have a subdomain owned by ALGOSUP named santaclock.
 ---
 
 
-## si qqn met un adresse, et reviens sur le site plus tard. toujours la même adresse ?
-
-## besoin de refresh ?
+## no refresh nedded
 
 
 
+First 00:00 at Greenwitch
 
 you can't ask for the localisation
 
@@ -199,6 +199,7 @@ unpredictable requirements changes
 Team bad communication
 No working software,  or until late
 Too complex
+Errors on calcul
 
 
 late 
@@ -211,11 +212,12 @@ security?
 
 
 countdown : DD:HH:MM:SS
-date of santa : 24th of decembre at 00:00:00:00
+date of santa : Between the 24th of december and the 25th of december at 00:00:00:00 
 peak load : several thousands of request
 postal address
 geographic coordinates
 speed of the sun
+ALGOSUP
 
 docker: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 
