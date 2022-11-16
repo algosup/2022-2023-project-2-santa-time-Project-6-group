@@ -181,7 +181,6 @@ For the design, we want a Christmas spirit, and for that, we want to use these c
 
 Add:
 - Santa Claus will be there in "count down"
-- Error 404 page
 
 <hr>
 
@@ -207,32 +206,12 @@ Add:
 
 <br>
 
-
-
-
-First 00:00 at Greenwitch
-
-you can't ask for the localisation
-
-give your postal address and it will be converted into coordinates
-
-Santa is travelling at the speed of the sun
-
-depending on the position you will know when Santa will come
-
-- the time will be the number of days, hours, minutes and seconds left (00: 00: 00: 00)
-
-
-Receive a large number of people on the website at the same time
-
-<br>
-
 # Security
 
-- Don't save any data
-## For the user
+We don't want to save any data.
 
-## For us
+We want also a minimum of security on the website.
+
 
 <br>
 
