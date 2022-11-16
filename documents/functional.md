@@ -160,6 +160,13 @@ We will not ask the user for his location. We also don't want any dependencies o
 
 We want you to find the position of the address by finding the geographical coordinates. 
 
+<br>
+
+We don't want to use the time to know when Santa will be there. We want you to use the position of the sun. We assume Santa Claus travels at the speed of the sun.
+
+So, Santa will arrive when the sun is in the exact opposite position of the address. 
+
+Greenwich, UK, will be the first place where Santa will come.
 
 <br>
 
@@ -179,9 +186,6 @@ For the design, we want a Christmas spirit, and for that, we want to use these c
 ## Mockups
 <br>
 
-Add:
-- Santa Claus will be there in "count down"
-
 <hr>
 
 ### index.html
@@ -189,11 +193,15 @@ Add:
 <hr>
 <br>
 
-<img src="images/mockup.png">
+<img src="images/mockupsanta.png">
 
 <br>
 
-<img src="images/mockups.jpg">
+The page when the user writes a wrong address.
+
+<br>
+
+<img src="images/mockupnotvalid.png">
 
 <br>
 
@@ -250,10 +258,10 @@ placeholder
 input 
 page 404
 API
+Greenwich ?
+
 
 docker: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
-
-Greenwich ?
 
 
 <br>
