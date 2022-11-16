@@ -80,7 +80,7 @@ From the height of her ten years, Camille wants to meet Santa Claus at all costs
 
 <br>
 
-**Scenario 3: Irène**
+**Scenario 3: Irène.**
 
 Irène is a mom of two kids who constantly asks her when Santa will arrive. To take some rest of those questions, she has decided to leave them on the santaclock website. 
 
@@ -89,7 +89,7 @@ As a protective mom, she wants to be sure her children are safe on this website.
 
 <br>
 
-**Scenario 4: Carl**
+**Scenario 4: Carl.**
 
 Carl is a computer science student who searching for a school. To find an interesting school he's going on multiple tradeshows. This is where he discovered ALGOSUP, some of their students have created the santaclock website. 
 
@@ -98,6 +98,10 @@ Seeing that a lot of people are on this website at the same time, Carl saw that 
 <br>
 
 # Non Goals
+
+See with the client!
+
+<hr>
 
 save the position / the input
 
@@ -111,23 +115,82 @@ list other dates
 
 <br>
 
-# santaclock.algosup.com Flowchart
+# Details
 
-???
+## Features
+
+The project is a website because we need it to be fast. We don't want the users to lose their time by downloading an application. 
+
+We will have a subdomain owned by ALGOSUP named santaclock.  
 
 <br>
 
-# Design
+When the user arrives on the website, he's on the index.html page.
+Here, he will get to know the page with the instructions for the address, the countdown and the map.
 
-ne pas ressembler à google
+<br>
 
-write what means the count down under
+Now that he knows the principal features of the page, he will enter a postal address in the right place because it's indicated with a placeholder with what he has to write. 
 
-00 : 00 : 00 : 00
+<br>
 
-days   hours   minutes   seconds
+When the user writes the wrong address or one with an error, the sentence "Are you sure you write an existing address?" will appear under the input.
+
+<br>
+
+When the user valid the address, the address will stay in the input. Therefore, it will be easier for the user to correct his error or to remember the address he writes.
+
+<br>
+
+The user will be able to press a button next to the input or to press the enter key to validate his address.
+
+<br>
+
+A Santa Claus head will be placed at the north pole when there is no address. Once there is a valid address, the Santa head will be at this one.
+
+<br>
+
+When the user writes the wrong HTTP address on the search bar, he will find an error 404 page.
+
+<br>
+
+We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API).
+
+<br>
+
+We want you to find the position of the address by finding the geographical coordinates. 
+
+
+<br>
+
+## Design
+
+<br>
+
+The main audience of this website will be kids and their parents. So, this website has to be as much user-friendly as possible.
+
+For the design, we want a Christmas spirit, and for that, we want to use these colours:
+- Light green: #58BD59,
+- White: #E9E9E9,
+- Red: #E82923,
+
+<br>
 
 ## Mockups
+<br>
+
+Add:
+- Santa Claus will be there in "count down"
+- Error 404 page
+
+<hr>
+
+### index.html
+
+<hr>
+<br>
+
+<img src="images/mockup.png">
 
 <br>
 
@@ -135,38 +198,15 @@ days   hours   minutes   seconds
 
 <br>
 
+### 404.html
 
-Display the precise time when Santa clause will be at the user's location
-- Put an input for the user to enter his postal adress and thus be able to have the most accurate prediction
-- Display the location of Santa clause on a map
-- Display the location of the reindeers on a map
-- Responsive design
-- The time will be displayed in a format like this (DD:HH:MM:SS)
+<hr>
+<br>
 
-" 00: 00: 00: 00 " precisely when the sun will be at the exact opposite of this coordinates.
-
-what append at 00:00 ? 
-
-errors pages
+<img src="images/mockup404.png">
 
 <br>
 
-# Description of the functionalities
-
-This will be a website because it needs to be fast, we don't want them to lose their time by downloading an application. Also, we will not have to get a google developer account which is chargeable.
-
-Robust, elastic, can handle a peak load. several thousand requests
-
-We will have a subdomain owned by ALGOSUP named santaclock.  
-
----
-
-
-## Write the postal address
----
-
-
-## no refresh nedded
 
 
 
@@ -185,19 +225,29 @@ depending on the position you will know when Santa will come
 
 Receive a large number of people on the website at the same time
 
-Security
+<br>
+
+# Security
 
 - Don't save any data
+## For the user
+
+## For us
 
 <br>
 
 # Risk and assumptions
 
 low user/ customer satisfaction
+
 unpredictable requirements changes
+
 Team bad communication
+
 No working software,  or until late
+
 Too complex
+
 Errors on calcul
 
 
@@ -210,13 +260,17 @@ security?
 
 
 
-countdown : DD:HH:MM:SS
+countdown : DD:HH:MM:SS time left
 date of santa : Between the 24th of december and the 25th of december at 00:00:00:00 
 peak load : several thousands of request
-postal address
+postal address : country!
 geographic coordinates
 speed of the sun
 ALGOSUP
+placeholder
+input 
+page 404
+API
 
 docker: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 
