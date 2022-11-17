@@ -21,6 +21,7 @@ the 2022-10-8
     - [Testing](#testing)
     - [Deployment](#deployment)
       - [Azure](#azure)
+          - [Why this hardware?](#why-this-hardware)
       - [Kubernetes](#kubernetes)
       - [Docker](#docker)
     - [Monitoring](#monitoring)
@@ -28,18 +29,21 @@ the 2022-10-8
     - [Website](#website)
       - [Frontend](#frontend)
       - [Backend](#backend)
+      - [Database](#database)
     - [Footnotes](#footnotes)
 
 </details>
 
 ### Overview
 
-The goal of the project is to make a prediction of Santa's location based on the current time and the time zone of the user. The project will be implemented by using these 3 main technologies:
+The goal of the project is to make a prediction of Santa's location based on the current time and the solar time (the exact position of the sun) of the user. The project will be implemented by using these 3 main technologies:
 - Node (JavaScript)
 - Docker (Containerization)
 - Kubernetes (Orchestration)
 
 The project will be accessible through this [website](https://santaclock.algosup.com).
+
+This is a simple project that allow us to focus on the deployment part and the peak load management of the site. 
 
 #### Why this project?
 
@@ -52,7 +56,7 @@ The project need to be entirely finished by the 15th of December 2022 but we are
 The project will be developed in 3 phases:
 - Phase 1: The project will be in a MVP state. It will be able to predict Santa's location based on the where the user is. The project will run locally (Week 2)
 - Phase 2: The project will be deployed on a Kubernetes cluster. then hosted on a server. The server will receive the firsts requests from the users. (Week 3)
-- Phase 3: The project will be in a production state. The cluster will be able to handle more requests. The bugs will be fixed. The project will be ready to be fully used by the users. (Week 5)
+- Phase 3: The project will be in a production state. The cluster will be able to handle more requests. The possible bugs will be fixed. The project will be ready to be fully used by the users. (Week 5)
 
 ### Software
 
@@ -70,7 +74,7 @@ There is a risk about the peak load of the software. Since will probably not be 
 
 The software will be tested using the following technologies:
 - Mocha (unit testing)
-- Postman (API testing)
+<!-- - Postman (API testing) -->
 
 We are going to test the peak load of the server with 2 different approaches:
 - Load testing multiples users at the same time with JMeter
@@ -93,6 +97,15 @@ The specifications of the server are up to be changed at any point if the need w
 - 8 GB RAM
 - 50 GB SSD
 
+###### Why this hardware? 
+
+| Hardware | Pros | Cons |
+| :---: | :---: | :---: |
+| Azure Kubernetes Service | - Easy to use <br> - Easy to scale <br> - Easy to manage | - Expensive <br> - Limited control over the server |
+| Physical Server | - Easy to manage <br> - Easy to scale <br> - Cheap | - Hard to use <br> - Hard to scale <br> - Hard to manage |
+
+We have chosen to use the minimum requirements for the server because we are going to adapt it depending on the peak load of the server. 
+
 We chose to use ubuntu 20.04 as the operating system, it is the most recent LTS version and a lot of documentation is available for it.
 
 We are planning to install a process to put the server in standby mode when it is not used to save ressources and we will also install a process to automatically update the server when a new version of the software is available to maintain the stability of the server.
@@ -103,7 +116,11 @@ One of the main part to have a good scalability is really related to docker, we 
 
 #### Kubernetes
 
-The part of kubernetes in this project is to scale the application to have as many users as possible. We are going to be able to manage the scaling of the application depending on the load of the server.
+Kubernetes is a container orchestration tool that allows us to deploy and manage our containers. It is a very powerful tool that allows us to scale our application very easily.
+
+it has an high availability with no downtime and it is also very performant and secure.
+
+On top of all of that we can also use it to deploy our application on multiple servers at the same time and it will automatically distribute the load between the servers (even if we only have one server for now).
 
 #### Docker
 
@@ -134,7 +151,7 @@ EXPOSE 3000
 CMD [ "node", "index.js" ]
 ```
 
-We this dockerfile we are going to be able to build the docker image and run it on any environment. 
+With this dockerfile we are going to be able to build the docker image and run it on any environment. 
 
 ### Monitoring
 
@@ -148,14 +165,14 @@ The part of Prometheus in this project is to collect metrics from the applicatio
 
 ### Website
 
-The goal of the website is to display and give a precise location of Santa claus (and his reindeers) based on the current time and the time zone of the user. The website should be responsive, work on all devices, and be really easy to use.
+The goal of the website is to display and give a precise location of Santa claus (and his reindeers) based on the current time and the solar time of the user. The website should be responsive, work on all devices, and be really easy to use.
 
 #### Frontend
 
 The design of the website will be done in a flat design and with only one page. (Maybe a second page if the need were to arise) and a dashboard to display the activity of the application. 
 
 The website will have the following features:
-- Display the current time of the user
+- Display the current solar time of the user
 - Display the precise time when Santa Claus will be at the user's location
 - Put an input for the user to enter his postal adress and his country thus we will be able to obtain the most accurate result
 - Display the location of Santa Claus on a map
@@ -178,11 +195,15 @@ The backend will have the following features:
 
 <!-- We are planning to use an API to get the coordinates of the user's location. We will use the following [API](https://nominatim.openstreetmap.org/) to get the coordinates of the user's location by entering his postal adress. -->
 
-We are going to create a database to store the coordinates of the postal code. Everything will be stored in a SQL database. divided in multipes regions. (EUW, EUE, NA, etc...) it's going to be a lot of data to process so that is why we are splitting them by regions. The user will have to specify the region of his postal code. Firstly to optimize the search by searching in the right region (the response of the database will be much faster) and secondly to avoid any problem with the postal code of the user, for instance we are located in Vierzon in France but if we enter our postal code (18100) it might give us the wrong location because there is also a city in spain with the same postal code or in italy.
-
-In order to get the exact solar time of the user, we will use these following [equations]( https://gml.noaa.gov/grad/solcalc/solareqns.PDF) To get the exact time of the sun at the user's location and then we will be able to calculate the exact time when Santa will be at the user's location.
+In order to get the exact solar time of the user, we will use these following [equations]( https://gml.noaa.gov/grad/solcalc/solareqns.PDF). To get the exact time of the sun at the user's location thus we will be able to calculate the exact time when Santa will be at the user's location.
 
 One of the most challenging part of the project is to identify and handle the peak load of the application. We will need to be able to handle a lot of users requests at the same time. 
+
+#### Database
+
+We should absolutely handle the possible SQL injections and the possible XSS attacks to avoid any problem with the security of the application, we are going to restrain the user's input to avoid any problem.
+
+We are going to create a database to store the coordinates of the postal adress. Everything will be stored in a SQL database. divided in multipes regions. (EUW, EUE, NA, etc...) it's going to be a lot of data to process so that is why we are splitting them by regions. The user will have to specify the region of his postal adress. Firstly to optimize the search by searching in the right region (the response of the database will be much faster) and secondly to avoid any problem with the postal adress of the user, for instance we are located in Vierzon in France but if we enter our postal adress (18100) it might give us the wrong location because there is also a city in Spain with the same postal code or in Italy.
 
 ### Footnotes
 
@@ -203,3 +224,4 @@ prometheus: Prometheus is an open-source systems monitoring and alerting toolkit
 grafana: Grafana is an open-source platform for monitoring and observability.
 
 responsive design: Responsive web design is an approach to web design aimed at building an optimal viewing experience for users across a wide range of devices (from desktop computer monitors to mobile phones).
+
