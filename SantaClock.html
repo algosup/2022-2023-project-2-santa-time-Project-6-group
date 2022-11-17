@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="SantaClock.css">
 <html>
-<input type="text" id="input" maxlength="50">
-<button onclick="Search(document.getElementById('input').value)"> Search</button></br>
-<div id="time">HH, MM, SS</div> </br>
-<div id="remaining">HH, MM, SS</div> 
+    <title> Santa Clock</title>
+    <link rel="shortcut icon" href="./sleigh.png">
+
+<div id="text1">Enter a postal address here :</div>
+<input type="text" id="input" maxlength="70" placeholder="Write your address here" spellcheck="true">
+<button onclick="Search(document.getElementById('input').value)" id="searchButton"> Search</button></br>
+<div id="text2"> Santa Claus will be there in</div>
+<div id="remaining">00 : 00 : 00 : 00</div> 
+<div id="text3">Days Hours Minutes Seconds</div>
 
 
 </html>

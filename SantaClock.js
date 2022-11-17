@@ -15,9 +15,7 @@ function Search(input) {
             
             if (name == address[location].addressName && country ==address[location].Country) {
                 setInterval(function () {
-                    var time = SolarTime(address[location].longitude, address[location].timezone)
                     var RemainingTime = SantArrival(address[location].longitude, address[location].timezone)
-                    document.getElementById("time").innerHTML = time[0] + "h : " + time[1] + "m : " + time[2] + "s"
                     document.getElementById("remaining").innerHTML =RemainingTime[0]+" days "+ RemainingTime[1] + "h : " + RemainingTime[2] + "m : " + RemainingTime[3] + "s"
                 }, 1000)
             }
