@@ -1,5 +1,10 @@
 body{
     background-color: #58BD59;
+    overflow: hidden;
+}
+
+html{
+      font-family: 'Montserrat', sans-serif;
 }
 #text1{
     color: white;
@@ -8,36 +13,33 @@ body{
     margin-top: 2%;
     font-size: 180%;
 }
-#input{
+/* input design */
+input{
     position: absolute;
     margin-top: 5%;
     margin-left: 5%;
     width: 30%;
-    height: 5%;
+    height: 6%;
     color: #58BD59;
+    z-index: 1;
+    border-radius: 5px;
+    border: none;
+    font-size: 110%;
 }
 #input::placeholder{
     text-align: center;
     color: #58BD59;
 
 }
-#searchButton{
-    position:absolute;
-    margin-top: 5%;
-    margin-left: 37%;
-    width: 5%;
-    height: 6%;
-
-}
 #text2{
     position: absolute;
-
     color: white;
     position: absolute;
     margin-left: 72%;
     margin-top: 1.3%;
     font-size: 105%;
 }
+/*  Remaining Time Design */
 #remaining{
     position: absolute;
     color:white;
@@ -49,16 +51,39 @@ body{
     word-spacing: 0.4em;
 
 }
-#text3{
+#Days{
     position: absolute;
     color: white;
     position: absolute;
     margin-left: 68%;
     margin-top: 6%;
     font-size: 115%;
-    word-spacing: 2.1em;
 }
-
+#Hours{
+    position: absolute;
+    color: white;
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 6%;
+    font-size: 115%;
+}
+#Minutes{
+    position: absolute;
+    color: white;
+    position: absolute;
+    margin-left: 82%;
+    margin-top: 6%;
+    font-size: 115%;
+}
+#Seconds{
+    position: absolute;
+    color: white;
+    position: absolute;
+    margin-left: 89%;
+    margin-top: 6%;
+    font-size: 115%;
+}
+/* Snowflakes design */
 .snowflake {
 	position: absolute;
 	display: block;
@@ -105,3 +130,55 @@ body{
 	height: 100%;
     z-index: -1;
 }
+
+#map{
+    position: absolute;
+    margin-top: -5%;
+    margin-left: 15%;
+    max-width: 60%;
+}
+#foot{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5%;
+        background-color: #145e15;
+        color: white;
+        text-align: center;
+}
+
+/* Design Button Search */
+#searchButton {
+    position:absolute;
+    margin-top: 5.1%;
+    margin-left: 37%;
+	width: 8%;
+    height: 6%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: #3d883e;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    z-index: 1;
+	
+}
+button:focus {
+	outline: none;
+}
+button img {
+    margin-left: 10%;
+	max-width: 30%;
+}
+button span {
+    margin-left: 10%;
+    color: white;
+	font-weight: bold;
+}
+button:hover{
+    background: #419642;
+
+}
+

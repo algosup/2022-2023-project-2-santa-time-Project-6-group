@@ -2,26 +2,25 @@
 var address = {
     address1: { addressName: "28 rue Jean Baptiste Leclerc", longitude: 2.42957, Country: "France", timezone: 1 },
     address2: { addressName: "15 Rue Neuve", longitude: 4.35456, Country: "Belgium", timezone: 1 },
-    address3: { addressName: "Allée George Charpak", longitude: 2.07118, Country: "France", timezone: 1 }
+    address3: { addressName: "Allée George Charpak", longitude: 2.07118, Country: "France", timezone: 1 },
+    address4: { addressName: "Ouelen", longitude: -169.81217717912574, Country: "Russia", timezone: 1 }
 };
 
 function Search(input) {
+	console.log(input)
     if (!input) {
         alert('Please, enter a location in this format : "address, country "')
     } else {
         for (const location in address) {
             var name=input.split(", ")[0]
             var country=input.split(", ")[1]
-            
+            console.log(name, country, address[location.addressName])
             if (name == address[location].addressName && country ==address[location].Country) {
                 setInterval(function () {
                     var RemainingTime = SantArrival(address[location].longitude, address[location].timezone)
-                    document.getElementById("remaining").innerHTML =RemainingTime[0]+" days "+ RemainingTime[1] + "h : " + RemainingTime[2] + "m : " + RemainingTime[3] + "s"
+                    document.getElementById("remaining").innerHTML =RemainingTime[0]+" : "+ RemainingTime[1] + " : " + RemainingTime[2] + " : " + RemainingTime[3] + ""
                 }, 1000)
             }
-        }
-        if(document.getElementById('time').innerHTML=="HH, MM, SS"){
-            alert("Incorrect or unknown adress, please, enter a location in this format : address, country")
         }
     }
 }
