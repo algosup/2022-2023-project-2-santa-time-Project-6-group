@@ -250,7 +250,7 @@ Doing this type of project, we can have multiple problems like:
 
 <br>
 
-# Glossary / Footnotes
+# Footnotes
 
 [^peak]: Several thousands of request per minute.
 
