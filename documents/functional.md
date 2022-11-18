@@ -26,17 +26,17 @@
 
 We have just entered the Christmas period, cities started to decorate their streets and children have started to make their gifts list for Santa Claus.
 
-For the eager children out there, we want a website where all the children in the world can see exactly when Santa will come.
+For the eager children out there, we want a website where all the children in the world can see exactly when Santa will come[^santa].
 
 Multiple people have already created websites or applications that can do that, they just take your localisation and give you the countdown[^countdown] till Christmas.
 
 We want something more precise but also not restricted to your position.
 
-The idea begins with a countdown[^countdown] till midnight on the 24th of December. Provided that, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates to know when it's midnight following the sun and not the clock.
+The idea begins with a countdown[^countdown] till midnight on the 24th of December. Provided that, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates[^coordinates] to know when it's midnight following the sun and not the clock.
 
 The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
 
-We use the position of the sun instead of the clock because we assume that Santa travels at the speed of the sun.
+We use the position of the sun instead of the clock because we assume that Santa travels at the speed of the sun[^speed].
 
 The second objective of this project is to assure a peak load[^peak] of the website at every time. We want to be sure that a maximum of children can go on this website at the same time.
 
@@ -91,7 +91,7 @@ As a protective mom, she wants to be sure her children are safe on this website.
 
 **Scenario 4: Carl.**
 
-Carl is a computer science student who searching for a school. To find an interesting school he's going on multiple tradeshows. This is where he discovered ALGOSUP, some of their students have created the santaclock website.
+Carl is a computer science student who searching for a school. To find an interesting school he's going on multiple tradeshows. This is where he discovered ALGOSUP[^algosup], some of their students have created the santaclock website.
 
 Seeing that a lot of people are on this website at the same time, Carl saw that it can handle peak load[^peak].
 
@@ -125,7 +125,7 @@ list other dates
 
 The project is a website because we need it to be fast. We don't want the users to lose their time by downloading an application.
 
-We will have a subdomain owned by ALGOSUP named santaclock.  
+We will have a subdomain owned by ALGOSUP[^algosup] named santaclock.  
 
 <br>
 
@@ -134,19 +134,19 @@ Here, he will get to know the page with the instructions for the address, the co
 
 <br>
 
-Now that he knows the principal features of the page, he will enter a postal address[^postal] in the right place because it's indicated with a placeholder with what he has to write.
+Now that he knows the principal features of the page, he will enter a postal address[^postal] in the right place because it's indicated with a placeholder[^placeholder] with what he has to write.
 
 <br>
 
-When the user writes the wrong address, an incomplete address or one with an error, the sentence "Are you sure you write an existing address?" will appear under the input.
+When the user writes the wrong address, an incomplete address or one with an error, the sentence "Are you sure you write an existing address?" will appear under the input[^input].
 
 <br>
 
-When the user valid the address, the address will stay in the input. Therefore, it will be easier for the user to correct his error or to remember the address he writes.
+When the user valid the address, the address will stay in the input[^input]. Therefore, it will be easier for the user to correct his error or to remember the address he writes.
 
 <br>
 
-The user will be able to press a button next to the input or to press the enter key to validate his address.
+The user will be able to press a button next to the input[^input] or to press the enter key to validate his address.
 
 <br>
 
@@ -154,19 +154,19 @@ A Santa Claus head will be placed at the north pole when there is no address. On
 
 <br>
 
-When the user writes the wrong HTTP address on the search bar, he will find an error 404 page.
+When the user writes the wrong HTTP address on the search bar, he will find an error 404 page[^404].
 
 <br>
 
-We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API).
+We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API)[^api].
 
 <br>
 
-We want you to find the position of the address by finding the geographical coordinates.
+We want you to find the position of the address by finding the geographical coordinates[^coordinates].
 
 <br>
 
-We don't want to use the time to know when Santa will be there. We want you to use the position of the sun. We assume Santa Claus travels at the speed of the sun.
+We don't want to use the time to know when Santa will be there. We want you to use the position of the sun. We assume Santa Claus travels at the speed of the sun[^speed].
 
 So, Santa will arrive when the sun is in the exact opposite position of the address.
 
@@ -174,7 +174,7 @@ Greenwich, UK, will be the first place where Santa will come.
 
 <br>
 
-We want to use [Docker](https://www.docker.com/) to develop the website to make the deployment easier.
+We want to use [Docker](https://www.docker.com/)[^docker] to develop the website to make the deployment easier.
 
 <br>
 
@@ -193,7 +193,7 @@ For the design, we want a Christmas spirit, and for that, we want to use these c
 
 The police font will be [Montserrat](https://fonts.google.com/specimen/Montserrat).
 
-The favicon of the website will be this image.
+The favicon[^favicon] of the website will be this image.
 
 <img style="height:70px" src="images/favicon.png">
 
@@ -234,7 +234,7 @@ The page when the user writes a wrong address.
 
 We don't want to save any data.
 
-We need to be sure people can't modify our database or inject some SQL in our input.
+We need to be sure people can't modify our database or inject some SQL[^inject] in our input[^input].
 
 <br>
 
@@ -252,9 +252,30 @@ Doing this type of project, we can have multiple problems like:
 
 # Glossary / Footnotes
 
-
 [^peak]: Several thousands of request per minute.
 
-[^postal]: The postal address is...
+[^postal]: The postal address is an address with the postal code and the country.
 
 [^countdown]: DD:HH:MM:SS as days, hours, minutes and seconds.
+
+[^docker]: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
+
+[^santa]: Between the 24th of december and the 25th of december at midnight.
+
+[^coordinates]: The geographic coordinates of a position is the latitude and longitude in decimal.
+
+[^speed]: The speed of the sun is 850 000 km/h.
+
+[^algosup]: Algosup is a computer science shcool based on Vierzon. And also the client of this project.
+
+[^placeholder]: A placeholder represents the substitution text for an element.
+
+[^input]: An input is a place where we can write.
+
+[^404]: A 404 error is an HTTP error code transmitted by a web server when a requested resource is unavailable or the server cannot find it.
+
+[^API]: It is a set of definitions and protocols for building and integrating application software.
+
+[^favicon]: A favicon is a small 16×16 pixel icon that serves as branding for your website.
+
+[^inject]: SQL injection (SQLi) is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database.
