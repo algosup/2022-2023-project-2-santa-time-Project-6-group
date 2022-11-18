@@ -14,7 +14,7 @@
 
 # Summary
 
-// doit etre retractable
+// have to be retractable
 
 <br>
 
@@ -103,9 +103,9 @@ The little Mike we saw previously will spend his Christmas at her aunt's house i
 
 <br>
 
-# Non Goals
+# Non-Goals
 
-**See with the client!**
+**See the client!**
 
 <hr>
 
@@ -174,7 +174,7 @@ Greenwich, UK, will be the first place where Santa will come.
 
 <br>
 
-We want to use [Docker](https://www.docker.com/) to develop the website to make the deployment easier. 
+We want to use [Docker](https://www.docker.com/) to develop the website to make the deployment easier.
 
 <br>
 
@@ -191,7 +191,7 @@ For the design, we want a Christmas spirit, and for that, we want to use these c
 - White: #E9E9E9,
 - Red: #E82923
 
-The police font will be [AppleGotic.](https://www.download-free-fonts.com/details/89379/applegothic-regular)
+The police font will be [Montserrat](https://fonts.google.com/specimen/Montserrat).
 
 The favicon of the website will be this image.
 
@@ -208,7 +208,8 @@ Christmas is one of the celebrations for everyone, so we need to compete with a 
 <hr>
 <br>
 
-<img src="images/mockupsanta.png">
+<img src="images/mockup.png">
+<img src="images/footer1.png">
 
 <br>
 
@@ -239,8 +240,6 @@ We need to be sure people can't modify our database or inject some SQL in our in
 
 # Risk and assumptions
 
-
-
 Doing this type of project, we can have multiple problems like:
 
 - Don't have enough users => Do a lot of communication about the website.
@@ -254,7 +253,7 @@ Doing this type of project, we can have multiple problems like:
 # Glossary / Footnotes
 
 countdown : DD:HH:MM:SS time left
-date of santa : Between the 24th of december and the 25th of december at 00:00:00:00
+date of Santa : Between the 24th of December and the 25th of December at 00:00:00:00
 peak load : several thousands of request
 postal address : country!
 geographic coordinates
@@ -267,6 +266,7 @@ API
 Greenwich ?
 favicon
 inject SQL
+html
 
 docker: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 
