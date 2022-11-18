@@ -28,13 +28,13 @@ We have just entered the Christmas period, cities started to decorate their stre
 
 For the eager children out there, we want a website where all the children in the world can see exactly when Santa will come.
 
-Multiple people have already created websites or applications that can do that, they just take your localisation and give you the countdown till Christmas.
+Multiple people have already created websites or applications that can do that, they just take your localisation and give you the countdown[^countdown] till Christmas.
 
 We want something more precise but also not restricted to your position.
 
-The idea begins with a countdown till midnight on the 24th of December. Provided that, the user only needs to write a postal address. Then, we will convert this address into geographic coordinates to know when it's midnight following the sun and not the clock.
+The idea begins with a countdown[^countdown] till midnight on the 24th of December. Provided that, the user only needs to write a postal address. Then, we will convert this address into geographic coordinates to know when it's midnight following the sun and not the clock.
 
-The countdown will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
+The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
 
 We use the position of the sun instead of the clock because we assume that Santa travels at the speed of the sun.
 
@@ -130,7 +130,7 @@ We will have a subdomain owned by ALGOSUP named santaclock.
 <br>
 
 When the user arrives on the website, he's on the index.html page.
-Here, he will get to know the page with the instructions for the address, the countdown and the map.
+Here, he will get to know the page with the instructions for the address, the countdown[^countdown] and the map.
 
 <br>
 
@@ -252,7 +252,8 @@ Doing this type of project, we can have multiple problems like:
 
 # Glossary / Footnotes
 
-countdown : DD:HH:MM:SS time left
+countdown[^countdown] : DD:HH:MM:SS as days, hours, minutes and seconds.
+
 date of Santa : Between the 24th of December and the 25th of December at 00:00:00:00
 peak load : several thousands of request
 postal address : country!
@@ -269,7 +270,3 @@ inject SQL
 html
 
 docker: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
-
-<br>
-
-<img src="images/timezone.jpeg">
