@@ -32,13 +32,13 @@ Multiple people have already created websites or applications that can do that, 
 
 We want something more precise but also not restricted to your position.
 
-The idea begins with a countdown[^countdown] till midnight on the 24th of December. Provided that, the user only needs to write a postal address. Then, we will convert this address into geographic coordinates to know when it's midnight following the sun and not the clock.
+The idea begins with a countdown[^countdown] till midnight on the 24th of December. Provided that, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates to know when it's midnight following the sun and not the clock.
 
 The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
 
 We use the position of the sun instead of the clock because we assume that Santa travels at the speed of the sun.
 
-The second objective of this project is to assure a peak load of the website at every time. We want to be sure that a maximum of children can go on this website at the same time.
+The second objective of this project is to assure a peak load[^peak] of the website at every time. We want to be sure that a maximum of children can go on this website at the same time.
 
 The project is due on the 15th of December 2022.
 
@@ -93,7 +93,7 @@ As a protective mom, she wants to be sure her children are safe on this website.
 
 Carl is a computer science student who searching for a school. To find an interesting school he's going on multiple tradeshows. This is where he discovered ALGOSUP, some of their students have created the santaclock website.
 
-Seeing that a lot of people are on this website at the same time, Carl saw that it can handle peak load.
+Seeing that a lot of people are on this website at the same time, Carl saw that it can handle peak load[^peak].
 
 <br>
 
@@ -134,7 +134,7 @@ Here, he will get to know the page with the instructions for the address, the co
 
 <br>
 
-Now that he knows the principal features of the page, he will enter a postal address in the right place because it's indicated with a placeholder with what he has to write.
+Now that he knows the principal features of the page, he will enter a postal address[^postal] in the right place because it's indicated with a placeholder with what he has to write.
 
 <br>
 
@@ -252,21 +252,9 @@ Doing this type of project, we can have multiple problems like:
 
 # Glossary / Footnotes
 
-countdown[^countdown] : DD:HH:MM:SS as days, hours, minutes and seconds.
 
-date of Santa : Between the 24th of December and the 25th of December at 00:00:00:00
-peak load : several thousands of request
-postal address : country!
-geographic coordinates
-speed of the sun
-ALGOSUP
-placeholder
-input
-page 404
-API
-Greenwich ?
-favicon
-inject SQL
-html
+[^peak]: Several thousands of request per minute.
 
-docker: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
+[^postal]: The postal address is...
+
+[^countdown]: DD:HH:MM:SS as days, hours, minutes and seconds.
