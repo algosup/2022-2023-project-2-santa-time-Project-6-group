@@ -47,6 +47,8 @@ We have just entered the Christmas period, cities started to decorate their stre
 
 For the eager children out there, we want a website where all the children in the world can see exactly when Santa will come[^santa].
 
+The first objective of this project is to assure a peak load[^peak] of the website at every time. We want to be sure that a maximum of children can go on this website at the same time.
+
 Multiple people have already created websites or applications that can do that, they just take your localisation and give you the countdown[^countdown] till Christmas.
 
 We want something more precise but also not restricted to your position.
@@ -56,8 +58,6 @@ The idea begins with a countdown[^countdown] till midnight on the 24th of Decemb
 The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
 
 We use the position of the sun instead of the clock because we assume that Santa travels at the speed of the sun[^speed].
-
-The second objective of this project is to assure a peak load[^peak] of the website at every time. We want to be sure that a maximum of children can go on this website at the same time.
 
 The project is due on the 15th of December 2022.
 
@@ -112,7 +112,7 @@ As a protective mom, she wants to be sure her children are safe on this website.
 
 Carl is a computer science student who searching for a school. To find an interesting school he's going on multiple tradeshows. This is where he discovered ALGOSUP[^algosup], some of their students have created the santaclock website.
 
-Seeing that a lot of people are on this website at the same time, Carl saw that it can handle peak load[^peak].
+Wanting to know what level of skill is taught at ALGOSUP, Carl decides to test how many requests the website can handle.
 
 <br>
 
@@ -145,6 +145,8 @@ list other dates
 The project is a website because we need it to be fast. We don't want the users to lose their time by downloading an application.
 
 We will have a subdomain owned by ALGOSUP[^algosup] named santaclock.  
+
+The main aim of this project is to ensure that the website can handle several thousand requests simultaneously.
 
 <br>
 
