@@ -54,9 +54,11 @@ The project need to be entirely finished by the 15th of December 2022 but we are
 #### Schedule
 
 The project will be developed in 3 phases:
-- Phase 1: The project will be in a MVP state. It will be able to predict Santa's location based on the where the user is. The project will run locally (Week 2)
+Phase 1: The server will be setup, we should only have to finish the website and put everything in a docker container (week 2)
+
 - Phase 2: The project will be deployed on a Kubernetes cluster. then hosted on a server. The server will receive the firsts requests from the users. (Week 3)
-- Phase 3: The project will be in a production state. The cluster will be able to handle more requests. The possible bugs will be fixed. The project will be ready to be fully used by the users. (Week 5)
+
+- Phase 3: The project will be in a production state. The cluster will be able to handle more requests. The server will be optimised and The project will be ready to be fully used by the users. (Week 5)
 
 ### Software
 
@@ -80,21 +82,21 @@ The software will be tested using the following technologies:
 
 We are going to test the peak load of the server with 2 different approaches:
 - Load testing multiples users at the same time with JMeter
-- Load testing complex operations to simulate numerous users 
+- Load testing complex operations to simulate numerous users
 
 ### Deployment
 
 This project need to be deployed with docker also we want to have as many users as possible so we will use Kubernetes to deploy the application in the most efficient way.
 
-The website will be hosted on an Azure Server. 
+The website will be hosted on an Azure Server.
 
 #### Azure 
 
-We have chosen to use a regular Virtual Machine to have the most control over the server and to be able to manage it more efficiently than using the standalone Azure Kubernetes Service. 
+We have chosen to use a regular Virtual Machine to have the most control over the server and to be able to manage it more efficiently than using the standalone Azure Kubernetes Service.
 
 The server will be hosted in France.
 
-The specifications of the server are up to be changed at any point if the need were to arise but currently we are using: 
+The specifications of the server are up to be changed at any point if the need were to arise but currently we are using:
 - 2 vCPU
 - 8 GB RAM
 - 50 GB SSD
@@ -197,22 +199,25 @@ The backend will have the following features:
 
 <!-- We are planning to use an API to get the coordinates of the user's location. We will use the following [API](https://nominatim.openstreetmap.org/) to get the coordinates of the user's location by entering his postal adress. -->
 
-In order to get the exact solar time of the user, we will use these following [equations]( https://gml.noaa.gov/grad/solcalc/solareqns.PDF). To get the exact time of the sun at the user's location thus we will be able to calculate the exact time when Santa will be at the user's location.
+In order to get the exact solar time of the user, we will use these [equations]( https://gml.noaa.gov/grad/solcalc/solareqns.PDF) done by the National Oceanic and Atmospheric Administration. To get the exact time of the sun at the user's location thus we will be able to calculate the exact time when Santa will be at the user's location.
 
-One of the most challenging part of the project is to identify and handle the peak load of the application. We will need to be able to handle a lot of users requests at the same time. 
+One of the most challenging part of the project is to identify and handle the peak load of the application. We will need to be able to handle a lot of users requests at the same time.
 
 #### Database
 
 We are going to create a database to store the coordinates of the postal adress. Everything will be stored in a SQL database. divided in multipes regions. (EUW, EUE, NA, etc...) it's going to be a lot of data to process so that is why we are splitting them by regions. The user will have to specify the region of his postal adress. Firstly to optimize the search by searching in the right region (the response of the database will be much faster) and secondly to avoid any problem with the postal adress of the user, for instance we are located in Vierzon in France but if we enter our postal adress (18100) it might give us the wrong location because there is also a city in Spain with the same postal code or in Italy.
 
-We are going to use our own database of [openstreetmap](https://www.openstreetmap.org/) to get the coordinates of the postal adress hosted on a azure server. 
+We are going to use our own database of [openstreetmap](https://www.openstreetmap.org/) to get the coordinates of the postal adress hosted on a azure server.
 
 We can also use this [Database](https://github.com/zauberware/postal-codes-json-xml-csv), it is a database of postal codes and coordinates of all the countries in the world; it is a very good database but it is not updated regularly and it is not very accurate, the point of using this one instead of the openstreetmap database is that it is a lot smaller and it is easier to use.
 
+Since we want to have the most optimised possible website, we are going to store the .json file directly in the files of the website and we will use the module fs to read the file and get the data from it. 
+
 | Database | Pros | Cons |
 | --- | --- | --- |
-| Openstreetmap | - Accurate <br> - Updated regularly | - Hard to use <br> - Hard to update |
-| Postal codes | - Easy to use <br> - Small | - Not accurate <br> - Not updated regularly |
+| Openstreetmap | - Accurate <br> - Updated regularly | - Hard to use <br> - Hard to update <br> - Hosted on another server |
+| Postal codes | - Easy to use <br> - Small | - Not accurate <br> - Not updated regularly <br> - Hosted on another server |
+| JSON file | - Easy to use <br> - Small <br> - Hosted on the same server | - Not accurate <br> - Not updated regularly |
 
 The database will have the following features:
 - Store all the streets names
