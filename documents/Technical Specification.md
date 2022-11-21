@@ -70,6 +70,8 @@ There is another problem about the timestamp. The timestamp will not be based on
 
 There is a risk about the peak load of the software. Since will probably not be able to change the server where the software will run, we need to be sure that there will be enough resources to handle the peak load and also check what is the peak load.
 
+We should absolutely handle the possible SQL injections and the possible XSS attacks to avoid any problem with the security of the application, we are going to restrain the user's input to avoid any problem. If someone is able to put a DROP TABLE in the input, the database will be deleted.
+
 ### Testing
 
 The software will be tested using the following technologies:
@@ -201,9 +203,23 @@ One of the most challenging part of the project is to identify and handle the pe
 
 #### Database
 
-We should absolutely handle the possible SQL injections and the possible XSS attacks to avoid any problem with the security of the application, we are going to restrain the user's input to avoid any problem.
-
 We are going to create a database to store the coordinates of the postal adress. Everything will be stored in a SQL database. divided in multipes regions. (EUW, EUE, NA, etc...) it's going to be a lot of data to process so that is why we are splitting them by regions. The user will have to specify the region of his postal adress. Firstly to optimize the search by searching in the right region (the response of the database will be much faster) and secondly to avoid any problem with the postal adress of the user, for instance we are located in Vierzon in France but if we enter our postal adress (18100) it might give us the wrong location because there is also a city in Spain with the same postal code or in Italy.
+
+We are going to use our own database of [openstreetmap](https://www.openstreetmap.org/) to get the coordinates of the postal adress hosted on a azure server. 
+
+We can also use this [Database](https://github.com/zauberware/postal-codes-json-xml-csv), it is a database of postal codes and coordinates of all the countries in the world; it is a very good database but it is not updated regularly and it is not very accurate, the point of using this one instead of the openstreetmap database is that it is a lot smaller and it is easier to use.
+
+| Database | Pros | Cons |
+| --- | --- | --- |
+| Openstreetmap | - Accurate <br> - Updated regularly | - Hard to use <br> - Hard to update |
+| Postal codes | - Easy to use <br> - Small | - Not accurate <br> - Not updated regularly |
+
+The database will have the following features:
+- Store all the streets names
+- Store all the postal adresses
+- Store the latitude and longitude of the postal adresses
+- Store the region of the postal adresses
+- Store the country of the postal adresses
 
 ### Footnotes
 

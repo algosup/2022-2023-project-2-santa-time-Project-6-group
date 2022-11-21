@@ -14,6 +14,23 @@
 
 # Summary
 
+<details>
+
+<summary>Table of contenst</summary>
+    
+ - [Summary](#summary)
+ - [Introduction](#introduction)
+ - [Functional Requirements](#functional-requirements)
+- [User Requirements](#user-requirements)
+   - [User Stories](#user-stories)
+   - [User Interface](#user-interface)
+- [System Requirements](#system-requirements)
+   - [System Architecture](#system-architecture)
+   - [System Interface](#system-interface)
+   - [System Constraints](#system-constraints)
+
+</details>
+
 // have to be retractable
 
 <br>
