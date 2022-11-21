@@ -18,16 +18,20 @@
 
 <summary>Table of contenst</summary>
     
- - [Summary](#summary)
- - [Introduction](#introduction)
- - [Functional Requirements](#functional-requirements)
-- [User Requirements](#user-requirements)
-   - [User Stories](#user-stories)
-   - [User Interface](#user-interface)
-- [System Requirements](#system-requirements)
-   - [System Architecture](#system-architecture)
-   - [System Interface](#system-interface)
-   - [System Constraints](#system-constraints)
+- [Summary](#summary)
+- [Overview](#overview)
+- [Stackholders](#stackholders)
+- [Personas](#personas)
+- [Scenarios](#scenarios)
+- [Non-goals](#non-goals)
+- [Details](#details)
+   - [Design](#design)
+   - [Mockups](#system-interface)
+      - [index.html](#indexhtml)
+      - [404.html](#404html)
+- [Security](#security)
+- [Risks and assumptions](#risk-and-assumptions)
+- [Footnotes](#footnotes)
 
 </details>
 
@@ -175,6 +179,10 @@ When the user writes the wrong HTTP address on the search bar, he will find an e
 
 <br>
 
+The website has to be responsive[^responsive] to be multi-screen friendly.
+
+<br>
+
 We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API)[^api].
 
 <br>
@@ -269,21 +277,21 @@ Doing this type of project, we can have multiple problems like:
 
 # Footnotes
 
-[^peak]: Several thousands of request per minute.
+[^peak]: Several thousands of requests per minute.
 
 [^postal]: The postal address is an address with the postal code and the country.
 
 [^countdown]: DD:HH:MM:SS as days, hours, minutes and seconds.
 
-[^docker]: Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
+[^docker]: Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software in packages called containers.
 
 [^santa]: Between the 24th of december and the 25th of december at midnight.
 
-[^coordinates]: The geographic coordinates of a position is the latitude and longitude in decimal.
+[^coordinates]: The geographic coordinates of a position are the latitude and longitude in decimal.
 
 [^speed]: The speed of the sun is 850 000 km/h.
 
-[^algosup]: Algosup is a computer science shcool based on Vierzon. And also the client of this project.
+[^algosup]: Algosup is a computer science school based in Vierzon. And also the client of this project.
 
 [^placeholder]: A placeholder represents the substitution text for an element.
 
@@ -296,3 +304,5 @@ Doing this type of project, we can have multiple problems like:
 [^favicon]: A favicon is a small 16×16 pixel icon that serves as branding for your website.
 
 [^inject]: SQL injection (SQLi) is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database.
+
+[^responsive]: A responsive web design is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.
