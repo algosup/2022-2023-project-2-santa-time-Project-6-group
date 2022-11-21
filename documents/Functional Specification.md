@@ -4,7 +4,7 @@
 <p align="center" style="font-weight: bold; font-size: 18px"> Functional Specification</p>
 <br>
 <p align="center"> Clémentine Curel</p>
-<p align="center"> Last Updated: November 14, 2022</p>
+<p align="center"> Last Updated: November 21, 2022</p>
 <br>
 <p align="center" style="font-weight: bold"> – C O N F I D E N T I A L –</p>
 
@@ -16,7 +16,7 @@
 
 <details>
 
-<summary>Table of contenst</summary>
+<summary>Table of content</summary>
     
 - [Summary](#summary)
 - [Overview](#overview)
@@ -34,8 +34,6 @@
 - [Footnotes](#footnotes)
 
 </details>
-
-// have to be retractable
 
 <br>
 
@@ -157,9 +155,11 @@ Here, he will get to know the page with the instructions for the address, the co
 
 Now that he knows the principal features of the page, he will enter a postal address[^postal] in the right place because it's indicated with a placeholder[^placeholder] with what he has to write.
 
+The placeholder and the address has to be centred on the input[input].
+
 <br>
 
-When the user writes the wrong address, an incomplete address or one with an error, the sentence "Are you sure you write an existing address?" will appear under the input[^input].
+When the user writes the wrong address, an incomplete address or one with an error, the sentence "Are you sure you have written an existing address?" will appear under the input[^input].
 
 <br>
 
@@ -231,6 +231,8 @@ Christmas is one of the celebrations for everyone, so we need to compete with a 
 ### index.html
 
 <hr>
+
+The search button will be larger when hovering it.
 <br>
 
 <img src="images/mockup.png">
