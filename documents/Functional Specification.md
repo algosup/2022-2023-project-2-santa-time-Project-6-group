@@ -20,16 +20,17 @@
     
 - [Summary](#summary)
 - [Overview](#overview)
-- [Stackholders](#stackholders)
+- [Stakeholders](#stakeholders)
 - [Personas](#personas)
 - [Scenarios](#scenarios)
-- [Non-goals](#non-goals)
 - [Details](#details)
+   - [Non-goals](#non-goals)
    - [Design](#design)
    - [Mockups](#system-interface)
       - [index.html](#indexhtml)
       - [404.html](#404html)
 - [Security](#security)
+- [Promotion campaign](#promotion-campaign)
 - [Risks and assumptions](#risk-and-assumptions)
 - [Footnotes](#footnotes)
 
@@ -64,7 +65,7 @@ The project is due on the 15th of December 2022.
 
 <br>
 
-# Stackholders
+# Stakeholders
 
 - ALGOSUP
 - Users
@@ -122,23 +123,6 @@ The little Mike we saw previously will spend his Christmas at her aunt's house i
 
 <br>
 
-# Non-Goals
-
-**See the client!**
-
-<hr>
-
-save the position / the input?
-
-good design
-
-world's map
-
-animations
-
-list other dates
-
-<br>
 
 # Details
 
@@ -147,6 +131,10 @@ The project is a website because we need it to be fast. We don't want the users 
 We will have a subdomain owned by ALGOSUP[^algosup] named santaclock.  
 
 The main aim of this project is to ensure that the website can handle several thousand requests simultaneously.
+
+<br>
+
+We want to use [Docker](https://www.docker.com/)[^docker] to develop the website to make the deployment easier.
 
 <br>
 
@@ -201,7 +189,14 @@ Greenwich, UK, will be the first place where Santa will come.
 
 <br>
 
-We want to use [Docker](https://www.docker.com/)[^docker] to develop the website to make the deployment easier.
+## Non-Goals
+
+
+<br>
+
+- Save the input
+- Autocompletion of the input
+- Other dates
 
 <br>
 
@@ -264,6 +259,32 @@ The page when the user writes a wrong address.
 We don't want to save any data.
 
 We need to be sure people can't modify our database or inject some SQL[^inject] in our input[^input].
+
+<br>
+
+# Promotion campaign
+
+The promotion campaign is the most important thing for a website to have users.  
+Correspondingly to this fact, we have opted for three different strategies:
+
+<br>
+
+## Social media:
+
+There are over two billion active users on Facebook, over a billion on Instagram and 12 million on Linkedin. Social media are nowadays the best place to promote something. 
+Consequently, sharing our website on these platforms is a solution to attract users. 
+
+## Word-of-mounth :
+
+As a rule, we know that when you like a website, you talk about it with 20% of your relatives and 80% when you don't like it.
+For this reason, we should encourage these people to talk to more than 20% of their relatives. 
+
+## After-sale customer survey:
+
+For the rest of the people who don't like the website, to avoid them spreading their unfavourable opinion, we can propose a survey. This survey will show us what's going wrong on our website. People will also know they are being listened to by us.
+
+
+
 
 <br>
 
