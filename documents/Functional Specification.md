@@ -24,6 +24,7 @@
 - [Personas](#personas)
 - [Scenarios](#scenarios)
 - [Details](#details)
+   - [Non-goals](#non-goals)
    - [Design](#design)
    - [Mockups](#system-interface)
       - [index.html](#indexhtml)
@@ -53,7 +54,7 @@ Multiple people have already created websites or applications that can do that, 
 
 We want something more precise but also not restricted to your position.
 
-The idea begins with a countdown[^countdown] till midnight on the 24th of December. Provided that, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates[^coordinates] to know when it's midnight following the sun and not the clock.
+The idea begins with a countdown[^countdown] till midnight on the 24th of December. In order to do this, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates[^coordinates] to know when it's midnight following the sun and not the clock.
 
 The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
 
@@ -88,7 +89,7 @@ The project is due on the 15th of December 2022.
 
 **Scenario 1: Mike.**
 
-Mike is a child of 4 yo who is impatient about Christmas and receiving gifts. Especially the last fire truck toy. With all this impatience, his mother has given him her tablet so he can know when Santa will come. Her mom has heard about the website santaclock thanks to an ad on Facebook.
+Mike is a child of 4 years old who is impatient about Christmas and receiving gifts. Especially the last fire truck toy. With all this impatience, his mother has given him her tablet so he can know when Santa will come. Her mom has heard about the website santaclock thanks to an ad on Facebook.
 
 Mike is worried about being alone on this website because he has difficulties in reading and writing. The biggest problem is not finding the place he wants.
 
@@ -133,11 +134,11 @@ The main aim of this project is to ensure that the website can handle several th
 
 <br>
 
-We want to use [Docker](https://www.docker.com/)[^docker] to develop the website to make the deployment easier.
+We want to use [Docker](https://www.docker.com/)[^docker] to develop the website and to make the deployment easier.
 
 <br>
 
-When the user arrives on the website, he's on the index.html page.
+When the user arrives on the website, he's on the main page.
 Here, he will get to know the page with the instructions for the address, the countdown[^countdown] and the map.
 
 <br>
@@ -169,6 +170,10 @@ When the user writes the wrong HTTP address on the search bar, he will find an e
 <br>
 
 The website has to be responsive[^responsive] to be multi-screen friendly.
+
+<br>
+
+The website will have a translation into English and French.
 
 <br>
 
@@ -271,18 +276,20 @@ Correspondingly to this fact, we have opted for three different strategies:
 ## Social media:
 
 There are over two billion active users on Facebook, over a billion on Instagram and 12 million on Linkedin. Social media are nowadays the best place to promote something. 
+
 Consequently, sharing our website on these platforms is a solution to attract users. 
 
 ## Word-of-mounth :
 
 As a rule, we know that when you like a website, you talk about it with 20% of your relatives and 80% when you don't like it.
+
 For this reason, we should encourage these people to talk to more than 20% of their relatives. 
 
 ## After-sale customer survey:
 
-For the rest of the people who don't like the website, to avoid them spreading their unfavourable opinion, we can propose a survey. This survey will show us what's going wrong on our website. People will also know they are being listened to by us.
+For the rest of the people who don't like the website, to avoid them spreading their unfavourable opinion, we can propose a survey. 
 
-
+This survey will show us what's going wrong on our website. People will also know they we are listened to them.
 
 
 <br>
@@ -315,11 +322,11 @@ Doing this type of project, we can have multiple problems like:
 
 [^speed]: The speed of the sun is 850 000 km/h.
 
-[^algosup]: Algosup is a computer science school based in Vierzon. And also the client of this project.
+[^algosup]: ALGOSUP is a computer science school based in Vierzon. And also the client of this project.
 
 [^placeholder]: A placeholder represents the substitution text for an element.
 
-[^input]: An input is a place where we can write.
+[^input]: An input is a place where we can write in a web page.
 
 [^404]: A 404 error is an HTTP error code transmitted by a web server when a requested resource is unavailable or the server cannot find it.
 
