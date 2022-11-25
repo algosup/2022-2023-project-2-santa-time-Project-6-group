@@ -7,20 +7,63 @@ html {
       font-family: 'Montserrat', sans-serif;
 }
 
+content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    flex-direction: column;
+}
+
 h1.Error {
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    font-size: 180%;
-    margin-top: 9vh;
+    /* height: 80vh; */
+    position: relative;
+    font-size: 20vw;
+    margin-top: 0vh;
+    margin-bottom: 0;
 }
 
 p.Text {
     color: white;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
+
+}
+p.tryText {
+    color: white;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 a.Link {
     color: white;
+    font-size: 3vh;
+}
+
+img.santaHat {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 14vh; */
+    /* margin-top: -2vh; */
+    margin-left: 15vw;
+    margin-top: -1vw;
+    width: 11vw;
+    height: 11vw;
+    transform: rotate(0deg);
+    z-index: 1; 
 }
