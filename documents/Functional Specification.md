@@ -4,7 +4,7 @@
 <p align="center" style="font-weight: bold; font-size: 18px"> Functional Specification</p>
 <br>
 <p align="center"> Clémentine Curel</p>
-<p align="center"> Last Updated: November 21, 2022</p>
+<p align="center"> Last Updated: November 25, 2022</p>
 <br>
 <p align="center" style="font-weight: bold"> – C O N F I D E N T I A L –</p>
 
@@ -24,7 +24,6 @@
 - [Personas](#personas)
 - [Scenarios](#scenarios)
 - [Details](#details)
-   - [Non-goals](#non-goals)
    - [Design](#design)
    - [Mockups](#system-interface)
       - [index.html](#indexhtml)
