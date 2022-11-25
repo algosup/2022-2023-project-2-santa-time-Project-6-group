@@ -12,3 +12,8 @@ Team:
 
 <img src="https://avatars.githubusercontent.com/LucienLAVATINE" width="60" height="60" /> Lucien Lavatine (Quality assurance)
 
+## Tools
+
+[forecast planning](https://docs.google.com/spreadsheets/d/1TxNVFZbkZaZi0UHTbuXbjm7T8tmfC888-yMdkyPQKmY/edit#gid=0)
+
+[Trello](https://trello.com/b/FmvYeenz/santa-time)
