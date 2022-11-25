@@ -1,0 +1,26 @@
+body{
+    background-color: #58BD59;
+    overflow: hidden;
+}
+
+html {
+      font-family: 'Montserrat', sans-serif;
+}
+
+h1.Error {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 180%;
+    margin-top: 9vh;
+}
+
+p.Text {
+    color: white;
+}
+
+a.Link {
+    color: white;
+}

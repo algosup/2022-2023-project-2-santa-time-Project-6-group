@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="SantaClock.css">
+<link rel="stylesheet" type="text/css" href="css/SantaClock.css">
 <html>
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
@@ -9,13 +9,12 @@
     </head>
 
     <title> Santa Clock</title>
-    <link rel="shortcut icon" href="./sleigh.png">
 
 <div id="text1">Enter a postal address here :</div>
 
 <input type="text" id="input" maxlength="70" placeholder="Write your address here" spellcheck="true" oninput="this.value = this.value.replace(/[^a-z,`çà0-9é-ù A-Z]/, '')" >
 
-<button onclick="Search(document.getElementById('input').value)" id="searchButton"><span> Search</span>  <img src="./gift.png"></button></br>
+<button onclick="Search(document.getElementById('input').value)" id="searchButton"><span> Search</span>  <img src="img/gift.png"></button></br>
 
 <div id="text2"> Santa Claus will be there in</div>
 <div id="remaining">00 : 00 : 00 : 00</div> 
@@ -26,15 +25,14 @@
 
 <div id="snow"></div>
 
-<img src="./Map.png" id="map" draggable="false">
-
-<div id="foot">
-    hey
-</div>
+<img src="img/Map.png" id="map" draggable="false">
+<footer>
+    
+</footer>
 </html>
 <!-- licences : 
 gift : <a href="https://www.flaticon.com/free-icons/gift" title="gift icons">Gift icons created by Pixel Buddha - Flaticon</a>
 DB :https://github.com/zauberware/postal-codes-json-xml-csv
 sleigh: <a href="https://www.flaticon.com/free-icons/sleigh" title="sleigh icons">Sleigh icons created by Pixelmeetup - Flaticon</a>
  -->
-<script src="./SantaClock.js"></script>
+<script src="js/SantaClock.js"></script>

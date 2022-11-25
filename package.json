@@ -1,0 +1,28 @@
+{
+  "name": "2022-2023-project-2-santa-time-project-6-group",
+  "version": "1.0.0",
+  "description": "[forecast planning](https://docs.google.com/spreadsheets/d/1TxNVFZbkZaZi0UHTbuXbjm7T8tmfC888-yMdkyPQKmY/edit#gid=0)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algosup/2022-2023-project-2-santa-time-Project-6-group.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/algosup/2022-2023-project-2-santa-time-Project-6-group/issues"
+  },
+  "homepage": "https://github.com/algosup/2022-2023-project-2-santa-time-Project-6-group#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
