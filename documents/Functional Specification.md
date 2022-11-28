@@ -4,9 +4,7 @@
 <p align="center" style="font-weight: bold; font-size: 18px"> Functional Specification</p>
 <br>
 <p align="center"> Clémentine Curel</p>
-<p align="center"> Last Updated: November 25, 2022</p>
 <br>
-<p align="center" style="font-weight: bold"> – C O N F I D E N T I A L –</p>
 
 <p align="center"> ALGOSUP, Group 6. All Rights Reserved. </p>
 
@@ -41,8 +39,6 @@
 # Overview
 
 <br>
-
-**This spec is not, by any stretch of the imagination, complete.**
 
 We have just entered the Christmas period, cities started to decorate their streets and children have started to make their gifts list for Santa Claus.
 
@@ -89,7 +85,7 @@ The project is due on the 15th of December 2022.
 
 **Scenario 1: Mike.**
 
-Mike is a child of 4 years old who is impatient about Christmas and receiving gifts. Especially the last fire truck toy. With all this impatience, his mother has given him her tablet so he can know when Santa will come. Her mom has heard about the website santaclock thanks to an ad on Facebook.
+Mike is a child of 6 years old who is impatient about Christmas and receiving gifts. Especially the last fire truck toy. With all this impatience, his mother has given him her tablet so he can know when Santa will come. Her mom has heard about the website santaclock thanks to one of her friend.
 
 Mike is worried about being alone on this website because he has difficulties in reading and writing. The biggest problem is not finding the place he wants.
 
