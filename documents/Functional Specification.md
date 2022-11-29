@@ -40,15 +40,18 @@
 
 <br>
 
-We have just entered the Christmas period, cities started to decorate their streets and children have started to make their gifts list for Santa Claus.
+We have just entered the Christmas period, cities have started to decorate their streets, and children have begun to make their gifts list for Santa Claus.
 
 For the eager children out there, we want a website where all the children in the world can see exactly when Santa will come[^santa].
 
-The first objective of this project is to assure a peak load[^peak] of the website at every time. We want to be sure that a maximum of children can go on this website at the same time.
+The first objective of this project is to ensure a peak load[^peak] of the website at every time. We want to be sure that a maximum of users can go on this website simultaneously.
 
-Multiple people have already created websites or applications that can do that, they just take your localisation and give you the countdown[^countdown] till Christmas.
+The second objective of this project is to give the user a fixed time in the time zone of the address.
 
+Multiple people have already created websites or applications that can do that. These take your location and the time till Christmas.
 We want something more precise but also not restricted to your position.
+
+We have decided to implement a countdown because it avoids the constant refresh of the user to know the exact time.
 
 The idea begins with a countdown[^countdown] till midnight on the 24th of December. In order to do this, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates[^coordinates] to know when it's midnight following the sun and not the clock.
 
@@ -277,9 +280,7 @@ Consequently, sharing our website on these platforms is a solution to attract us
 
 ## Word-of-mounth :
 
-As a rule, we know that when you like a website, you talk about it with 20% of your relatives and 80% when you don't like it.
-
-For this reason, we should encourage these people to talk to more than 20% of their relatives. 
+On of the easiest marketing strategy is the word-of-mounth. For this strategy, you need to talk about the website at your relatives. 
 
 ## After-sale customer survey:
 
@@ -287,6 +288,23 @@ For the rest of the people who don't like the website, to avoid them spreading t
 
 This survey will show us what's going wrong on our website. People will also know they we are listened to them.
 
+# Flyer advertise
+
+Our targets are parents and children, so we have decided to advertise flyers around schools and supermarkets. These flyers will be in French. We also decided to advertise flyers in the ALGOSUP school, with English ones.
+
+To be able to advertise flyers, we need to follow some rules:
+- Printed by us
+- Do not litter
+- No black writing on white background
+- No flags
+
+## English flyer
+
+<img src="images/en.png">
+
+## French flyer 
+
+<img src="images/fr.png">
 
 <br>
 
@@ -299,6 +317,7 @@ Doing this type of project, we can have multiple problems like:
 - Low customer satisfaction or unpredictable requirements changes => Be sure of what the customer wants by making him validate the functional specification.
 - Not working software, calculation errors or security issues => Write a test plan and test everything.
 - Delay => Follow the forecast planning and respect deadlines.
+- Law => Follow precisely the law.
 
 <br>
 
