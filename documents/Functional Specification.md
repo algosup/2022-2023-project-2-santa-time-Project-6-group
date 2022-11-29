@@ -184,6 +184,12 @@ We want you to find the position of the address by finding the geographical coor
 
 <br>
 
+For a website, the recerencing[^referencing] is one of the principal keys to be found by users. 
+
+Not having a lot of financial means, we have decided not to use so-called paid or sponsored referencing (SEA) but to use so-called natural or organic referencing (SEO). 
+
+<br>
+
 We don't want to use the time to know when Santa will be there. We want you to use the position of the sun. We assume Santa Claus travels at the speed of the sun[^speed].
 
 So, Santa will arrive when the sun is in the exact opposite position of the address.
@@ -236,7 +242,7 @@ The search button will be larger when hovering it.
 <br>
 
 <img src="images/mockup.png">
-<img src="images/footer1.png">
+<img src="images/footer.png">
 
 <br>
 
@@ -270,7 +276,6 @@ We need to be sure people can't modify our database or inject some SQL[^inject] 
 The promotion campaign is the most important thing for a website to have users.  
 Correspondingly to this fact, we have opted for three different strategies:
 
-<br>
 
 ## Social media:
 
@@ -288,7 +293,7 @@ For the rest of the people who don't like the website, to avoid them spreading t
 
 This survey will show us what's going wrong on our website. People will also know they we are listened to them.
 
-# Flyer advertise
+## Flyer advertise
 
 Our targets are parents and children, so we have decided to advertise flyers around schools and supermarkets. These flyers will be in French. We also decided to advertise flyers in the ALGOSUP school, with English ones.
 
@@ -298,11 +303,11 @@ To be able to advertise flyers, we need to follow some rules:
 - No black writing on white background
 - No flags
 
-## English flyer
+### English flyer
 
 <img src="images/en.png" style="width: 300px">
 
-## French flyer 
+### French flyer 
 
 <img src="images/fr.png" style="width: 300px">
 
@@ -318,6 +323,7 @@ Doing this type of project, we can have multiple problems like:
 - Not working software, calculation errors or security issues => Write a test plan and test everything.
 - Delay => Follow the forecast planning and respect deadlines.
 - Law => Follow precisely the law.
+- Wrong website => Use of a QR code, good website referencing 
 
 <br>
 
@@ -352,3 +358,5 @@ Doing this type of project, we can have multiple problems like:
 [^inject]: SQL injection (SQLi) is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database.
 
 [^responsive]: A responsive web design is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.
+
+[^referencing]: On the internet, the term referencing has been used to define the action of registering a site on a search engine or a directory.
