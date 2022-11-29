@@ -300,11 +300,11 @@ To be able to advertise flyers, we need to follow some rules:
 
 ## English flyer
 
-<img src="images/en.png">
+<img src="images/en.png" style="width: 300px">
 
 ## French flyer 
 
-<img src="images/fr.png">
+<img src="images/fr.png" style="width: 300px">
 
 <br>
 
