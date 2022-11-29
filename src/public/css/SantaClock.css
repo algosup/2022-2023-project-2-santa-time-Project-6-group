@@ -1,25 +1,41 @@
-body{
+body {
     background-color: #58BD59;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-html{
-      font-family: 'Montserrat', sans-serif;
+html {
+    font-family: 'Montserrat', sans-serif;
 }
-#text1{
+
+#text1 {
     color: white;
-    position: absolute;
-    margin-left:5%;
-    margin-top: 2%;
+    position: relative;
+    left: 5vw;
+    top: 1vh;
     font-size: 180%;
 }
+
+/* Flag */
+#flags {
+    position: relative;
+    left: 92vw;
+}
+
+#flags img {
+    width: 3%;
+}
+
+#flags img:hover {
+    cursor: pointer;
+}
+
 /* input design */
-input{
-    position: absolute;
-    margin-top: 5%;
-    margin-left: 5%;
-    width: 30%;
-    height: 6%;
+input {
+    position: relative;
+    top: 2vh;
+    left: 5vw;
+    width: 32%;
+    height: 6vh;
     color: #58BD59;
     z-index: 1;
     border-radius: 5px;
@@ -28,160 +44,204 @@ input{
     text-align: center;
 }
 
-input#input::placeholder{
+#input::placeholder {
     text-align: center;
     color: #58BD59;
 }
-#text2{
-    position: absolute;
+
+#text2 {
     color: white;
-    position: absolute;
-    margin-left: 72%;
-    margin-top: 1.3%;
+    position: relative;
+    left: 74vw;
+    top: -15vh;
     font-size: 105%;
 }
+
 /*  Remaining Time Design */
-#remaining{
-    position: absolute;
-    color:white;
+#remaining {
+    position: relative;
+    color: white;
     width: 50%;
     height: 5%;
     font-size: 220%;
-    margin-left: 68%;
-    margin-top: 3%;
+    left: 68vw;
+    top: -15vh;
     word-spacing: 0.4em;
 
 }
-#Days{
-    position: absolute;
+
+#Days {
+    position: relative;
     color: white;
-    position: absolute;
-    margin-left: 68%;
-    margin-top: 6%;
+    left: 68vw;
+    top: -15vh;
     font-size: 115%;
 }
-#Hours{
-    position: absolute;
+
+#Hours {
+    position: relative;
     color: white;
-    position: absolute;
-    margin-left: 75%;
-    margin-top: 6%;
+    left: 74.7vw;
+    top: -18.2vh;
     font-size: 115%;
 }
-#Minutes{
-    position: absolute;
+
+#Minutes {
+    position: relative;
     color: white;
-    position: absolute;
-    margin-left: 82%;
-    margin-top: 6%;
+    left: 81vw;
+    top: -21.5vh;
     font-size: 115%;
 }
-#Seconds{
-    position: absolute;
+
+#Seconds {
+    position: relative;
     color: white;
-    position: absolute;
-    margin-left: 89%;
-    margin-top: 6%;
+    left: 88vw;
+    top: -24.6vh;
     font-size: 115%;
 }
+
 /* Snowflakes design */
 .snowflake {
-	position: absolute;
-	display: block;
-	position: absolute;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-	background-image: -webkit-radial-gradient(
-		center,
-		circle farthest-corner,
-		rgba(255, 255, 255, 1) 40%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	background-image: -moz-radial-gradient(
-		center,
-		circle farthest-corner,
-		rgba(255, 255, 255, 1) 40%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	background-image: -ms-radial-gradient(
-		center,
-		circle farthest-corner,
-		rgba(255, 255, 255, 1) 40%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	background-image: radial-gradient(
-		center,
-		circle farthest-corner,
-		rgba(255, 255, 255, 1) 40%,
-		rgba(255, 255, 255, 0) 100%
-	);
+    position: absolute;
+    display: block;
+    margin-top: -29%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-image: -webkit-radial-gradient(center,
+            circle farthest-corner,
+            rgba(255, 255, 255, 1) 40%,
+            rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-radial-gradient(center,
+            circle farthest-corner,
+            rgba(255, 255, 255, 1) 40%,
+            rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-radial-gradient(center,
+            circle farthest-corner,
+            rgba(255, 255, 255, 1) 40%,
+            rgba(255, 255, 255, 0) 100%);
+    background-image: radial-gradient(center,
+            circle farthest-corner,
+            rgba(255, 255, 255, 1) 40%,
+            rgba(255, 255, 255, 0) 100%);
 }
+
 #snow {
-	position: absolute;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     z-index: -1;
 }
 
-img#map{
-    position: absolute;
-    margin-top: 0%;
-    margin-left: 15%;
+/* Map */
+#map {
+    position: relative;
+    top: -47vh;
+    left: 15vw;
     max-width: 60%;
-}
-footer{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 5%;
-        background-color: #145e15;
-        color: white;
-        text-align: center;
 }
 
 /* Design Button Search */
-button#searchButton {
-    position:absolute;
-    margin-top: 5.1%;
-    margin-left: 37%;
-	width: 8%;
-    height: 6%;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	background: #3d883e;
-	border: none;
-	border-radius: 5px;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+#searchButton {
+    position: relative;
+    top: -4vh;
+    left: 37.8vw;
+    width: 8%;
+    height: 6vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #3d883e;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
     z-index: 1;
-}
 
+}
 
 button:focus {
-	outline: none;
+    outline: none;
 }
+
 button img {
     margin-left: 10%;
-	max-width: 30%;
+    max-width: 30%;
 }
+
 button span {
     margin-left: 10%;
     color: white;
-	font-weight: bold;
-}
-button#searchButton:hover{
-    background: #419642;
-    transform: scale(1.1);
-    transition: 0.5s;
+    font-weight: bold;
 }
 
+#searchButton:hover {
+    background: #419642;
+
+}
+
+/* Footer Design */
+
+#foot {
+    position: relative;
+    left: -4vw;
+    bottom: 45vh;
+    width: 130vw;
+    height: 15vh;
+    background-color: #3d883e;
+    color: white;
+    font-size: 83%;
+
+}
+
+#licences {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    bottom: -10vh;
+    left: -1vw;
+}
+
+a {
+    color: white;
+}
+
+a:hover, a:active, a:visited, a:link {
+    text-decoration: none;
+}
+
+/* responsive cases */
+
+@media only screen and (max-width: 620px) {
+    div {
+        position: static;
+    }
+
+    #text1, #text2, #input, #remaining {
+        width: 100vw;
+    }
+
+    #searchButton {
+        width: 30vw;
+        align-self: center;
+    }
+
+    #days, #Hours, #Minutes, #seconds {
+        left: 20vw;
+    }
+
+    #map {
+        width: 20vw;
+        align-self: center;
+    }
+
+}

@@ -1,38 +1,63 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="css/SantaClock.css">
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+<head>
+    <link rel="stylesheet" href="/css/SantaClock.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+</head>
 
-    <title> Santa Clock</title>
+<title> Santa Clock</title>
+<link rel="shortcut icon" href="/img/sleigh.png">
+<div id="flags"><img src="/img/united-kingdom.png" id="UK" onclick="Language('UK')"> <img src="/img/france.png" id="FR"
+        onclick="Language('FR')"></div>
+<div id="text1">Enter a postal address here:</div>
 
-<div id="text1">Enter a postal address here :</div>
+<body>
+    <input type="text" id="input" maxlength="70" placeholder="Postal code, country" spellcheck="true"
+        oninput="this.value = this.value.replace(/[^a-z,`çà0-9é-ù A-Z -]/, '')">
 
-<input type="text" id="input" maxlength="70" placeholder="Write your address here" spellcheck="true" oninput="this.value = this.value.replace(/[^a-z,`çà0-9é-ù A-Z]/, '')" >
+    <button onclick="Search(document.getElementById('input').value)" id="searchButton"><span id="buttonText">
+            Search</span> <img src="/img/gift.png" id="buttonIMG"></button></br>
 
-<button onclick="Search(document.getElementById('input').value)" id="searchButton"><span> Search</span>  <img src="img/gift.png"></button></br>
+    <div id="text2">Santa will be there in:</div>
+    <div id="remaining">00 : 00 : 00 : 00</div>
 
-<div id="text2"> Santa Claus will be there in</div>
-<div id="remaining">00 : 00 : 00 : 00</div> 
-<div id="Days">Days </div>
-<div id="Hours">Hours </div>
-<div id="Minutes">Minutes </div>
-<div id="Seconds">Seconds</div>
+    <div id="Days">Days </div>
+    <div id="Hours">Hours </div>
+    <div id="Minutes">Minutes </div>
+    <div id="Seconds">Seconds</div>
 
-<div id="snow"></div>
+    <div id="snow"></div>
 
-<img src="img/Map.png" id="map" draggable="false">
-<footer>
+    <img src="/img/Map.png" id="map" draggable="false">
     
+</body>
+<footer>
+    <div id="foot">
+        <div></div>
+        <div id="licences">
+            © 2022 SantaClock, Algosup inc<br>
+            <a href="https://www.flaticon.com/free-icons/sleigh" title="sleigh icons">Sleigh icons created by
+                Pixelmeetup, Flaticon -</a>
+            <a href="https://www.flaticon.com/free-icons/gift" title="Gift icons">Gift icons created by Pixel
+                Buddha,Flaticon -</a>
+            <a href="https://github.com/zauberware/postal-codes-json-xml-csv" title="Database">Database made by
+                zauberware, Github -</a>
+            <a href="https://www.flaticon.com/free-icons/uk-flag" title="uk flag icons">Uk flag icons created by
+                Freepik, Flaticon -</a>
+            <a href="https://www.flaticon.com/free-icons/flag" title="French icons">Flag icons created by Freepik,
+                Flaticon</a>
+        </div>
+    </div>
 </footer>
+
 </html>
 <!-- licences : 
-gift : <a href="https://www.flaticon.com/free-icons/gift" title="gift icons">Gift icons created by Pixel Buddha - Flaticon</a>
-DB :https://github.com/zauberware/postal-codes-json-xml-csv
+            gift : <a href="https://www.flaticon.com/free-icons/gift" title="gift icons">Gift icons created by Pixel Buddha - Flaticon</a>
+            DB :https://github.com/zauberware/postal-codes-json-xml-csv
 sleigh: <a href="https://www.flaticon.com/free-icons/sleigh" title="sleigh icons">Sleigh icons created by Pixelmeetup - Flaticon</a>
  -->
-<script src="js/SantaClock.js"></script>
+<script src="/js/SantaClock.js"></script>
