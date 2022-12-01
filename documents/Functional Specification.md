@@ -21,12 +21,13 @@
 - [Stakeholders](#stakeholders)
 - [Personas](#personas)
 - [Scenarios](#scenarios)
-- [Details](#details)
+- [Fonctionalities](#fonctionalities)
    - [Non-goals](#non-goals)
    - [Design](#design)
    - [Mockups](#system-interface)
       - [index.html](#indexhtml)
       - [404.html](#404html)
+- [Details](#details)
 - [Security](#security)
 - [Promotion campaign](#promotion-campaign)
 - [Risks and assumptions](#risk-and-assumptions)
@@ -123,24 +124,16 @@ The little Mike we saw previously will spend his Christmas at her aunt's house i
 <br>
 
 
-# Details
+# Fonctionalities
 
 The project is a website because we need it to be fast. We don't want the users to lose their time by downloading an application.
-
-We will have a subdomain owned by ALGOSUP[^algosup] named santaclock.  
-
-The main aim of this project is to ensure that the website can handle several thousand requests simultaneously.
-
-<br>
 
 We want to use [Docker](https://www.docker.com/)[^docker] to develop the website and to make the deployment easier.
 
 <br>
 
-When the user arrives on the website, he's on the main page.
-Here, he will get to know the page with the instructions for the address, the countdown[^countdown] and the map.
-
-<br>
+When the user arrives on the website, he's on the main page (index.html).
+Here, he will get to know the page with the instructions for the address and the countdown[^countdown].
 
 Now that he knows the principal features of the page, he will enter a postal address[^postal] in the right place because it's indicated with a placeholder[^placeholder] with what he has to write.
 
@@ -148,55 +141,9 @@ The placeholder and the address has to be centred on the input[input].
 
 <br>
 
-When the user writes the wrong address, an incomplete address or one with an error, the sentence "Are you sure you have written an existing address?" will appear under the input[^input].
-
-<br>
-
-When the user valid the address, the address will stay in the input[^input]. Therefore, it will be easier for the user to correct his error or to remember the address he writes.
-
-<br>
-
-The user will be able to press a button next to the input[^input] or to press the enter key to validate his address.
-
-<br>
-
 A Santa Claus head will be placed at the north pole when there is no address. Once there is a valid address, the Santa head will be at this one.
 
-<br>
-
-When the user writes the wrong HTTP address on the search bar, he will find an error 404 page[^404].
-
-<br>
-
 The website has to be responsive[^responsive] to be multi-screen friendly.
-
-<br>
-
-The website will have a translation into English and French.
-
-<br>
-
-We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API)[^api].
-
-<br>
-
-We want you to find the position of the address by finding the geographical coordinates[^coordinates].
-
-<br>
-
-For a website, the recerencing[^referencing] is one of the principal keys to be found by users. 
-
-Not having a lot of financial means, we have decided not to use so-called paid or sponsored referencing (SEA) but to use so-called natural or organic referencing (SEO). 
-
-<br>
-
-We don't want to use the time to know when Santa will be there. We want you to use the position of the sun. We assume Santa Claus travels at the speed of the sun[^speed].
-
-So, Santa will arrive when the sun is in the exact opposite position of the address.
-
-Greenwich, UK, will be the first place where Santa will come.
-
-<br>
 
 ## Non-Goals
 
@@ -263,6 +210,66 @@ The page when the user writes a wrong address.
 
 <br>
 
+# Details
+
+<br>
+
+We will have a subdomain owned by ALGOSUP[^algosup] named santaclock.  
+
+The main aim of this project is to ensure that the website can handle several thousand requests simultaneously.
+
+<br>
+
+When the user writes the wrong address, an incomplete address or one with an error, the sentence "Are you sure you have written an existing address?" will appear under the input[^input].
+
+<br>
+
+When the user valid the address, the address will stay in the input[^input]. Therefore, it will be easier for the user to correct his error or to remember the address he writes.
+
+<br>
+
+The user will be able to press a button next to the input[^input] or to press the enter key to validate his address.
+
+<br>
+
+When the user writes the wrong HTTP address on the search bar, he will find an error 404 page[^404].
+
+<br>
+
+The website will have a translation into English and French.
+
+<br>
+
+We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API)[^api].
+
+<br>
+
+We want you to find the position of the address by finding the geographical coordinates[^coordinates].
+
+<br>
+
+We have decided that is pointless to use cookies[^cookies] because:
+- We don't ask for login,
+- We don't save any information.
+
+<br>
+
+For a website, the recerencing[^referencing] is one of the principal keys to be found by users. 
+
+Not having a lot of financial means, we have decided not to use so-called paid or sponsored referencing (SEA) but to use so-called natural or organic referencing (SEO). 
+
+<br>
+
+We don't want to use the time to know when Santa will be there. We want you to use the position of the sun. We assume Santa Claus travels at the speed of the sun[^speed].
+
+So, Santa will arrive when the sun is in the exact opposite position of the address.
+
+Greenwich, UK, will be the first place where Santa will come.
+
+<br>
+
+<br>
+
 # Security
 
 We don't want to save any data.
@@ -317,13 +324,13 @@ To be able to advertise flyers, we need to follow some rules:
 
 Doing this type of project, we can have multiple problems like:
 
-- Don't have enough users => Do a lot of communication about the website.
 - Low user satisfaction => Make it user-friendly.
 - Low customer satisfaction or unpredictable requirements changes => Be sure of what the customer wants by making him validate the functional specification.
 - Not working software, calculation errors or security issues => Write a test plan and test everything.
 - Delay => Follow the forecast planning and respect deadlines.
 - Law => Follow precisely the law.
-- Wrong website => Use of a QR code, good website referencing 
+- Go on the wrong website => Use of a QR code, good website referencing 
+- Don't have enough users => Do a lot of communication about the website.
 
 <br>
 
@@ -350,6 +357,8 @@ Doing this type of project, we can have multiple problems like:
 [^input]: An input is a place where we can write in a web page.
 
 [^404]: A 404 error is an HTTP error code transmitted by a web server when a requested resource is unavailable or the server cannot find it.
+
+[^cookies]: Cookies have multiple uses: they can be used to memorize your customer identifier with a merchant site, the current content of your shopping cart, the display language of the web page, an identifier allowing you to trace your browsing statistical or advertising purposes, etc.
 
 [^API]: It is a set of definitions and protocols for building and integrating application software.
 
