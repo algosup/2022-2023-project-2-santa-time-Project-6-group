@@ -49,16 +49,12 @@ The first objective of this project is to ensure a peak load[^peak] of the websi
 
 The second objective of this project is to give the user a fixed time in the time zone of the address.
 
+The third objective of this project is to promote the website to find users.
+
 Multiple people have already created websites or applications that can do that. These take your location and the time till Christmas.
 We want something more precise but also not restricted to your position.
 
-We have decided to implement a countdown because it avoids the constant refresh of the user to know the exact time.
-
-The idea begins with a countdown[^countdown] till midnight on the 24th of December. In order to do this, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates[^coordinates] to know when it's midnight following the sun and not the clock.
-
-The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
-
-We use the position of the sun instead of the clock because we assume that Santa travels at the speed of the sun[^speed].
+<br>
 
 The project is due on the 15th of December 2022.
 
@@ -125,6 +121,16 @@ The little Mike we saw previously will spend his Christmas at her aunt's house i
 
 
 # Fonctionalities
+
+We have decided to implement a countdown because it avoids the constant refresh of the user to know the exact time.
+
+It's a countdown[^countdown] till midnight on the 24th of December. In order to do this, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates[^coordinates] to know when it's midnight following the sun and not the clock.
+
+The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
+
+We use the position of the sun instead of the clock because we assume that Santa travels at the speed of the sun[^speed].
+
+<br>
 
 The project is a website because we need it to be fast. We don't want the users to lose their time by downloading an application.
 
@@ -220,31 +226,19 @@ The main aim of this project is to ensure that the website can handle several th
 
 <br>
 
-When the user writes the wrong address, an incomplete address or one with an error, the sentence "Are you sure you have written an existing address?" will appear under the input[^input].
+- When the user writes the wrong address, an incomplete address or one with an error, the sentence "Are you sure you have written an existing address?" will appear under the input[^input].
 
-<br>
+- When the user valid the address, the address will stay in the input[^input]. Therefore, it will be easier for the user to correct his error or to remember the address he writes.
 
-When the user valid the address, the address will stay in the input[^input]. Therefore, it will be easier for the user to correct his error or to remember the address he writes.
+- The user will be able to press a button next to the input[^input] or to press the enter key to validate his address.
 
-<br>
+- When the user writes the wrong HTTP address on the search bar, he will find an error 404 page[^404].
 
-The user will be able to press a button next to the input[^input] or to press the enter key to validate his address.
+- The website will have a translation into English and French.
 
-<br>
+- We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API)[^api].
 
-When the user writes the wrong HTTP address on the search bar, he will find an error 404 page[^404].
-
-<br>
-
-The website will have a translation into English and French.
-
-<br>
-
-We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API)[^api].
-
-<br>
-
-We want you to find the position of the address by finding the geographical coordinates[^coordinates].
+- We want you to find the position of the address by finding the geographical coordinates[^coordinates].
 
 <br>
 
@@ -268,7 +262,6 @@ Greenwich, UK, will be the first place where Santa will come.
 
 <br>
 
-<br>
 
 # Security
 
@@ -300,7 +293,7 @@ For the rest of the people who don't like the website, to avoid them spreading t
 
 This survey will show us what's going wrong on our website. People will also know they we are listened to them.
 
-## Flyer advertise
+## Flyer advertise:
 
 Our targets are parents and children, so we have decided to advertise flyers around schools and supermarkets. These flyers will be in French. We also decided to advertise flyers in the ALGOSUP school, with English ones.
 
