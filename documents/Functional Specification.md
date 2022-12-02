@@ -51,6 +51,8 @@ The second objective of this project is to give the user a fixed time in the tim
 
 The third objective of this project is to promote the website to find users.
 
+These three objectives have to be realised with Docker.
+
 Multiple people have already created websites or applications that can do that. These take your location and the time till Christmas.
 We want something more precise but also not restricted to your position.
 
@@ -85,7 +87,7 @@ The project is due on the 15th of December 2022.
 
 **Scenario 1: Mike.**
 
-Mike is a child of 6 years old who is impatient about Christmas and receiving gifts. Especially the last fire truck toy. With all this impatience, his mother has given him her tablet so he can know when Santa will come. Her mom has heard about the website santaclock thanks to one of her friend.
+Mike is a child of 6 years old who is impatient about Christmas and receiving gifts. Especially the last fire truck toy. With all this impatience, his mother has given him her tablet so he can know when Santa will come. Her mom has heard about the website santaclock thanks to one of her friends.
 
 Mike is worried about being alone on this website because he has difficulties in reading and writing. The biggest problem is not finding the place he wants.
 
@@ -99,7 +101,7 @@ From the height of her ten years, Camille wants to meet Santa Claus at all costs
 
 **Scenario 3: Irène.**
 
-Irène is a mom of two kids who constantly asks her when Santa will arrive. To take some rest of those questions, she has decided to leave them on the santaclock website.
+Irène is a mom of two kids who constantly ask her when Santa will arrive. To take some rest of those questions, she has decided to leave them on the santaclock website.
 
 As a protective mom, she wants to be sure her children are safe on this website. That is why she doesn't want to be asking for pieces of information or seeing ads.
 
@@ -134,7 +136,7 @@ We use the position of the sun instead of the clock because we assume that Santa
 
 The project is a website because we need it to be fast. We don't want the users to lose their time by downloading an application.
 
-We want to use [Docker](https://www.docker.com/)[^docker] to develop the website and to make the deployment easier.
+We want to use [Docker](https://www.docker.com/)[^docker] to develop the website and make the deployment easier.
 
 <br>
 
@@ -143,7 +145,16 @@ Here, he will get to know the page with the instructions for the address and the
 
 Now that he knows the principal features of the page, he will enter a postal address[^postal] in the right place because it's indicated with a placeholder[^placeholder] with what he has to write.
 
-The placeholder and the address has to be centred on the input[input].
+The placeholder and the address have to be centred on the input[input].
+
+<br>
+
+The user will have to write:
+- A town,
+- The postal code of the town,
+- The country of this town.
+
+We have decided that the user will not have to write his all address because, in most cases, people don't want to write their address on an unknown website. Additionally, the database will be lighter, so the website will be faster. 
 
 <br>
 
@@ -283,15 +294,15 @@ There are over two billion active users on Facebook, over a billion on Instagram
 
 Consequently, sharing our website on these platforms is a solution to attract users. 
 
-## Word-of-mounth :
+## Word-of-mouth :
 
-On of the easiest marketing strategy is the word-of-mounth. For this strategy, you need to talk about the website at your relatives. 
+One of the easiest marketing strategies is word-of-mouth. For this strategy, you need to talk about the website with your relatives. 
 
 ## After-sale customer survey:
 
 For the rest of the people who don't like the website, to avoid them spreading their unfavourable opinion, we can propose a survey. 
 
-This survey will show us what's going wrong on our website. People will also know they we are listened to them.
+This survey will show us what's going wrong on our website. People will also know we are listening to them.
 
 ## Flyer advertise:
 
@@ -322,7 +333,7 @@ Doing this type of project, we can have multiple problems like:
 - Not working software, calculation errors or security issues => Write a test plan and test everything.
 - Delay => Follow the forecast planning and respect deadlines.
 - Law => Follow precisely the law.
-- Go on the wrong website => Use of a QR code, good website referencing 
+- Go on the wrong website => Use a QR code, good website referencing 
 - Don't have enough users => Do a lot of communication about the website.
 
 <br>
@@ -347,7 +358,7 @@ Doing this type of project, we can have multiple problems like:
 
 [^placeholder]: A placeholder represents the substitution text for an element.
 
-[^input]: An input is a place where we can write in a web page.
+[^input]: An input is a place where we can write on a web page.
 
 [^404]: A 404 error is an HTTP error code transmitted by a web server when a requested resource is unavailable or the server cannot find it.
 
