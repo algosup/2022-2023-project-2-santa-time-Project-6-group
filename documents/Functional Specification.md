@@ -30,6 +30,9 @@
 - [Details](#details)
 - [Security](#security)
 - [Promotion campaign](#promotion-campaign)
+   - [Social media](#social-media)
+   - [Word-of-mouth](#word-of-mounth)
+   - [Customer experience feedback](#customer-experience-feedback)
 - [Risks and assumptions](#risk-and-assumptions)
 - [Footnotes](#footnotes)
 
@@ -298,11 +301,13 @@ Consequently, sharing our website on these platforms is a solution to attract us
 
 One of the easiest marketing strategies is word-of-mouth. For this strategy, you need to talk about the website with your relatives. 
 
-## After-sale customer survey:
+## Customer experience feedback:
 
-For the rest of the people who don't like the website, to avoid them spreading their unfavourable opinion, we can propose a survey. 
+For the rest of the people who don't like the website, to avoid them spreading their unfavourable opinion, we can propose a way to give us feedback. 
 
-This survey will show us what's going wrong on our website. People will also know we are listening to them.
+We have created an email account (santaclock25@gmail.com) to receive all the feedback.
+
+This feedback will show us what's going wrong on our website. People will also know they we are listening to them.
 
 ## Flyer advertise:
 
