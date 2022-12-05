@@ -329,13 +329,11 @@ There are over two billion active users on Facebook, over a billion on Instagram
 
 Consequently, sharing our website on these platforms is a solution to attract users. 
 
-<br>
 
 ## Word-of-mouth :
 
 One of the easiest marketing strategies is word-of-mouth. For this strategy, you need to talk about the website with your relatives. 
 
-<br>
 
 ## Customer experience feedback:
 
@@ -345,7 +343,7 @@ We have created an email account (santaclock25@gmail.com) to receive all the fee
 
 This feedback will show us what's going wrong on our website. People will also know they we are listening to them.
 
-<br>
+
 
 ## Flyer advertise:
 
