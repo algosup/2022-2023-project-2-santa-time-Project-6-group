@@ -48,11 +48,11 @@ We have just entered the Christmas period, cities have started to decorate their
 
 For the eager children out there, we want a website where all the children in the world can see exactly when Santa will come[^santa].
 
-The first objective of this project is to ensure a peak load[^peak] of the website at every time. We want to be sure that a maximum of users can go on this website simultaneously.
+- The first objective of this project is to ensure a peak load[^peak] of the website at every time. We want to be sure that a maximum of users can go on this website simultaneously.
 
-The second objective of this project is to give the user a fixed time in the time zone of the address.
+- The second objective of this project is to give the user a fixed time in the time zone of the address.
 
-The third objective of this project is to promote the website to find users.
+- The third objective of this project is to promote the website to find users.
 
 These three objectives have to be realised with Docker.
 
@@ -129,39 +129,43 @@ The little Mike we saw previously will spend his Christmas at her aunt's house i
 
 We have decided to implement a countdown because it avoids the constant refresh of the user to know the exact time.
 
-It's a countdown[^countdown] till midnight on the 24th of December. In order to do this, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates[^coordinates] to know when it's midnight following the sun and not the clock.
+- It's a countdown[^countdown] till midnight on the 24th of December. In order to do this, the user only needs to write a postal address[^postal]. Then, we will convert this address into geographic coordinates[^coordinates] to know when it's midnight following the sun and not the clock.
 
-The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
+- The countdown[^countdown] will display the number of days, hours, minutes and seconds left before the precise time when the sun will be at the exact opposite of these coordinates on the 24th of December 2022.
 
 We use the position of the sun instead of the clock because we assume that Santa travels at the speed of the sun[^speed].
 
-<br>
-
 The project is a website because we need it to be fast. We don't want the users to lose their time by downloading an application.
 
-We want to use [Docker](https://www.docker.com/)[^docker] to develop the website and make the deployment easier.
+We have to use [Docker](https://www.docker.com/)[^docker] to develop the website and make the deployment easier.
 
 <br>
 
 When the user arrives on the website, he's on the main page (index.html).
-Here, he will get to know the page with the instructions for the address and the countdown[^countdown].
+Here, he will get to know the page with the instructions for the address, and the map, and the countdown[^countdown].
 
 Now that he knows the principal features of the page, he will enter a postal address[^postal] in the right place because it's indicated with a placeholder[^placeholder] with what he has to write.
 
-The placeholder and the address have to be centred on the input[input].
+- The placeholder has to be centred on the input[input].
+
+- The placeholder will be "write your town, the postal code, and the country."
 
 <br>
 
 The user will have to write:
 - A town,
-- The postal code of the town,
+
+- The postal code of this town,
+
 - The country of this town.
+
+- The user will write the town, the postal code and the country in the order he wants.
+
+- If the user puts a comma between words, it will not gives him an error. 
 
 We have decided that the user will not have to write his all address because, in most cases, people don't want to write their address on an unknown website. Additionally, the database will be lighter, so the website will be faster. 
 
 <br>
-
-A Santa Claus head will be placed at the north pole when there is no address. Once there is a valid address, the Santa head will be at this one.
 
 The website has to be responsive[^responsive] to be multi-screen friendly.
 
@@ -171,7 +175,9 @@ The website has to be responsive[^responsive] to be multi-screen friendly.
 <br>
 
 - Save the input
+
 - Autocompletion of the input
+
 - Other dates
 
 <br>
@@ -185,8 +191,11 @@ The main audience of this website will be kids and their parents. So, this websi
 For the design, we want a Christmas spirit, and for that, we want to use these colours:
 
 - Light green: #58BD59,
+
 - Dark green: #32794B,
+
 - White: #E9E9E9,
+
 - Red: #E82923
 
 The police font will be [Montserrat](https://fonts.google.com/specimen/Montserrat).
@@ -208,22 +217,36 @@ Christmas is one of the favourite celebrations for everyone, so we need to compe
 The search button will be larger when hovering it.
 <br>
 
-<img src="images/mockup.png">
+<img src="images/index.png">
 <img src="images/footer.png">
 
 <br>
 
-The page when the user writes a wrong address.
+When the user writes an address, Santa's head will be placed on the map to point to the address.
 
 <br>
 
-<img src="images/mockupnotvalid.png">
+<img src="images/example.png">
 
 <br>
+
+When the user writes an address that we don't have in our database, an error message will appear, and Santa's head will not be placed.
+
+<img src="images/wrong.png">
+
+<br>
+
+When it is precisely midnight according to the sun, a text appears under the countdown, saying "Santa Claus is here!".
+
+<img src="images/dday.png">
+
+<br>
+
 
 ### 404.html
 
 <hr>
+When the user writes the wrong HTTP address on the search bar, he will find an error 404 page[^404].
 <br>
 
 <img src="images/404.png">
@@ -246,8 +269,6 @@ The main aim of this project is to ensure that the website can handle several th
 
 - The user will be able to press a button next to the input[^input] or to press the enter key to validate his address.
 
-- When the user writes the wrong HTTP address on the search bar, he will find an error 404 page[^404].
-
 - The website will have a translation into English and French.
 
 - We will not ask the user for his location. We also don't want any dependencies on anything. It means no Application Programming Interface (API)[^api].
@@ -258,6 +279,7 @@ The main aim of this project is to ensure that the website can handle several th
 
 We have decided that is pointless to use cookies[^cookies] because:
 - We don't ask for login,
+
 - We don't save any information.
 
 <br>
@@ -265,6 +287,13 @@ We have decided that is pointless to use cookies[^cookies] because:
 For a website, the recerencing[^referencing] is one of the principal keys to be found by users. 
 
 Not having a lot of financial means, we have decided not to use so-called paid or sponsored referencing (SEA) but to use so-called natural or organic referencing (SEO). 
+
+The website should be in HTTPS [^https] for multiple reasons:
+- Assure the safety of users,
+
+- Will help for the referencing of the website,
+
+- Give a good image of the website.
 
 <br>
 
@@ -279,9 +308,11 @@ Greenwich, UK, will be the first place where Santa will come.
 
 # Security
 
-We don't want to save any data.
+- We don't want to save any data.
 
-We need to be sure people can't modify our database or inject some SQL[^inject] in our input[^input].
+- We need to be sure people can't modify our database or inject some SQL[^inject] in our input[^input].
+
+- From the point of view of the law, we must put the licenses of the images and the database.
 
 <br>
 
@@ -290,6 +321,7 @@ We need to be sure people can't modify our database or inject some SQL[^inject] 
 The promotion campaign is the most important thing for a website to have users.  
 Correspondingly to this fact, we have opted for three different strategies:
 
+<br>
 
 ## Social media:
 
@@ -297,9 +329,11 @@ There are over two billion active users on Facebook, over a billion on Instagram
 
 Consequently, sharing our website on these platforms is a solution to attract users. 
 
+
 ## Word-of-mouth :
 
 One of the easiest marketing strategies is word-of-mouth. For this strategy, you need to talk about the website with your relatives. 
+
 
 ## Customer experience feedback:
 
@@ -308,6 +342,8 @@ For the rest of the people who don't like the website, to avoid them spreading t
 We have created an email account (santaclock25@gmail.com) to receive all the feedback.
 
 This feedback will show us what's going wrong on our website. People will also know they we are listening to them.
+
+
 
 ## Flyer advertise:
 
@@ -378,3 +414,5 @@ Doing this type of project, we can have multiple problems like:
 [^responsive]: A responsive web design is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.
 
 [^referencing]: On the internet, the term referencing has been used to define the action of registering a site on a search engine or a directory.
+
+[^https]: The HTTPS protocol (Hyper Text Transfer Protocol Secure) is a secure extension of the HTTP protocol, the "S" for "Secured" means that the data exchanged between the Internet user's browser and the website is encrypted and cannot be spied on (confidentiality) or modified (integrity).
