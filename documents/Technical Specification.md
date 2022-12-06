@@ -4,10 +4,6 @@
 
 written by: Théo Diancourt 
 
-the 2022-10-8
-
-
-
 <details>
 <summary>Table of Contents</summary>
 
@@ -19,6 +15,7 @@ the 2022-10-8
     - [Software](#software)
     - [Risks and Assumptions](#risks-and-assumptions)
     - [Testing](#testing)
+      - [Stress testing](#stress-testing)
     - [Deployment](#deployment)
       - [Azure](#azure)
           - [Why this hardware?](#why-this-hardware)
@@ -30,6 +27,7 @@ the 2022-10-8
       - [Frontend](#frontend)
       - [Backend](#backend)
       - [Database](#database)
+    - [Possible improvements](#possible-improvements)
     - [Footnotes](#footnotes)
 
 </details>
@@ -43,7 +41,7 @@ The goal of the project is to make a prediction of Santa's location based on the
 
 The project will be accessible through this [website](https://santaclock.algosup.com).
 
-This is a simple project that allow us to focus on the deployment part and the peak load management of the site. 
+This is a simple project that allow us to focus on the deployment part and the peak load management of the site.
 
 #### Why this project?
 
@@ -54,7 +52,7 @@ The project need to be entirely finished by the 15th of December 2022 but we are
 #### Schedule
 
 The project will be developed in 3 phases:
-Phase 1: The server will be setup, we should only have to finish the website and put everything in a docker container (week 2)
+- Phase 1: The server will be setup, we should only have to finish the website and put everything in a docker container (week 2)
 
 - Phase 2: The project will be deployed on a Kubernetes cluster. then hosted on a server. The server will receive the firsts requests from the users. (Week 3)
 
@@ -84,6 +82,10 @@ We are going to test the peak load of the server with 2 different approaches:
 - Load testing multiples users at the same time with JMeter
 - Load testing complex operations to simulate numerous users
 
+#### Stress testing 
+
+Since we are going to use azure, we can use the built-in stress testing tool to test the peak load of the server. We can also use the built-in monitoring tool to see the CPU usage and the RAM usage of the server at the same time and adapt the server to support a bigger peak load. 
+
 ### Deployment
 
 This project need to be deployed with docker also we want to have as many users as possible so we will use Kubernetes to deploy the application in the most efficient way.
@@ -92,7 +94,15 @@ The website will be hosted on an Azure Server.
 
 #### Azure 
 
-We have chosen to use a regular Virtual Machine to have the most control over the server and to be able to manage it more efficiently than using the standalone Azure Kubernetes Service.
+We have chosen to use the azure container service to deploy our application. It is a managed Kubernetes service that will allow us to deploy our application in a very efficient way, without having to manage the cluster.
+
+The server will be hosted in France.
+
+The image of the application will be automatically deployed on azure when we push on the docker hub.
+
+We also prepared a regular virtual machine to deploy the application in order to have more control over the server and a better understanding of the deployment process.
+
+For this we have chosen to use a regular Virtual Machine with Ubuntu 20.04 LTS.
 
 The server will be hosted in France.
 
@@ -136,7 +146,7 @@ how to build the docker image:
 FROM node:latest
 
 # Create app directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -152,10 +162,10 @@ COPY . .
 EXPOSE 3000
 
 # Run the application
-CMD [ "node", "index.js" ]
+CMD [ "npm", "deploy" ]
 ```
 
-With this dockerfile we are going to be able to build the docker image and run it on any environment. 
+With this dockerfile we are going to be able to build the docker image and run it on any environment.
 
 ### Monitoring
 
@@ -173,7 +183,9 @@ The goal of the website is to display and give a precise location of Santa claus
 
 #### Frontend
 
-The design of the website will be done in a flat design and with only one page. (Maybe a second page if the need were to arise) and a dashboard to display the activity of the application. 
+The design of the website will be done in a flat design and with only one page for the content, another one will be done to put the licenses. and a dashboard to display the activity of the application. 
+
+We are also going to make a 404 page to display if the user is trying to access a page that does not exist. 
 
 The website will have the following features:
 - Display the current solar time of the user
@@ -183,8 +195,7 @@ The website will have the following features:
 - Display the location of the reindeers on a map
 - Responsive design
 - The time will be displayed in a format like this (DD:HH:MM:SS)
-
-[Mockup]() <!-- Insert mockup here -->
+- The website will be available in English and French
 
 #### Backend
 
@@ -195,9 +206,8 @@ The backend will have the following features:
 - Retrieve the data that the user entered 
 - Send the data to the database
 - Send the data to the frontend
-- 
 
-<!-- We are planning to use an API to get the coordinates of the user's location. We will use the following [API](https://nominatim.openstreetmap.org/) to get the coordinates of the user's location by entering his postal adress. -->
+<!-- We are planning to use an API to get the coordinates of the user's location. We will use the following [API](https:// nominatim.openstreetmap.org/) to get the coordinates of the user's location by entering his postal adress. -->
 
 In order to get the exact solar time of the user, we will use these [equations]( https://gml.noaa.gov/grad/solcalc/solareqns.PDF) done by the National Oceanic and Atmospheric Administration. To get the exact time of the sun at the user's location thus we will be able to calculate the exact time when Santa will be at the user's location.
 
@@ -205,13 +215,11 @@ One of the most challenging part of the project is to identify and handle the pe
 
 #### Database
 
-We are going to create a database to store the coordinates of the postal adress. Everything will be stored in a SQL database. divided in multipes regions. (EUW, EUE, NA, etc...) it's going to be a lot of data to process so that is why we are splitting them by regions. The user will have to specify the region of his postal adress. Firstly to optimize the search by searching in the right region (the response of the database will be much faster) and secondly to avoid any problem with the postal adress of the user, for instance we are located in Vierzon in France but if we enter our postal adress (18100) it might give us the wrong location because there is also a city in Spain with the same postal code or in Italy.
+We are going to create a database to store the coordinates of the postal adress. Everything will be stored in a SQL database. divided by countries. It is going to be a lot of data to process so that is why we are splitting them by countries. The user will have to specify the country of his postal adress. Firstly to optimize the search by searching in the right region (the response of the database will be much faster) and secondly to avoid any problem with the postal adress of the user, for instance we are located in Vierzon in France but if we enter our postal adress (18100) it might give us the wrong location because there is also a city in Spain with the same postal code or in Italy and so on.
 
-We are going to use our own database of [openstreetmap](https://www.openstreetmap.org/) to get the coordinates of the postal adress hosted on a azure server.
+We are going to use our own [database](https://github.com/zauberware/postal-codes-json-xml-csv), it is a very simple dataset of postal codes and coordinates, we are going to refactor it to be easier to use, remove the unnecessary data and transform it into a SQL database hosted on a azure server.
 
-We can also use this [Database](https://github.com/zauberware/postal-codes-json-xml-csv), it is a database of postal codes and coordinates of all the countries in the world; it is a very good database but it is not updated regularly and it is not very accurate, the point of using this one instead of the openstreetmap database is that it is a lot smaller and it is easier to use.
-
-Since we want to have the most optimised possible website, we are going to store the .json file directly in the files of the website and we will use the module fs to read the file and get the data from it. 
+We also have access to another database based on [openstreetmap](https://www.openstreetmap.org/) but it is way too big for our needs because it contains all the addresses, which is not necessary for our project. We also don't want to force the user to enter his address, we want him to be able to only enter his postal code and his country, it is more convenient for the user.
 
 | Database | Pros | Cons |
 | --- | --- | --- |
@@ -220,11 +228,16 @@ Since we want to have the most optimised possible website, we are going to store
 | JSON file | - Easy to use <br> - Small <br> - Hosted on the same server | - Not accurate <br> - Not updated regularly |
 
 The database will have the following features:
-- Store all the streets names
 - Store all the postal adresses
 - Store the latitude and longitude of the postal adresses
-- Store the region of the postal adresses
 - Store the country of the postal adresses
+
+### Possible improvements 
+
+- Add a feature to move Santa Clause on the map
+- Make the website available in more languages
+- Zoom in and out on the map
+- Add more design to the website (animations, etc...)
 
 ### Footnotes
 
@@ -236,7 +249,7 @@ kubernetes: Kubernetes is an open-source system for automating deployment, scali
 
 mocha: Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple.
 
-postman: Postman is a collaboration platform for API development.
+<!-- postman: Postman is a collaboration platform for API development. -->
 
 jmeter: Apache JMeter may be used to test performance both on static and dynamic resources, Web dynamic applications.
 
