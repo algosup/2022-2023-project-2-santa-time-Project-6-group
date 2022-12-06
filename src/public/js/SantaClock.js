@@ -18,18 +18,18 @@ function Search(input) {
             if (name == address[location].addressName && country ==address[location].Country) {
                 setInterval(function () {
                     var RemainingTime = SantArrival(address[location].longitude, address[location].timezone)
-                    document.getElementById("remaining").innerHTML =RemainingTime[0]+" : "+ RemainingTime[1] + " : " + RemainingTime[2] + " : " + RemainingTime[3] + ""
+                    document.getElementById("remainingNumbers").innerHTML =RemainingTime[0]+" : "+ RemainingTime[1] + " : " + RemainingTime[2] + " : " + RemainingTime[3] + ""
                 }, 1000)
             }
         }
     }
 }
-var input = document.getElementById("input");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    Search(input.value)
-  }
-});
+// var input = document.getElementById("userInput");
+// input.addEventListener("keypress", function(event) {
+//   if (event.key === "Enter") {
+//     Search(input.value)
+//   }
+// });
 function getFractYear() {
     var fractYear;
     var now = new Date();
@@ -74,12 +74,12 @@ function SantArrival(longitude, timezone) {
 
 
 
-var Snowflake = (function() {
+var Snowflake = (function () {
 
 	var flakes;
-	var flakesTotal = 40;
+	var flakesTotal = 70;
 	var wind = 0;
-	
+
 
 	function Snowflake(size, x, y, vx, vy) {
 		this.size = size;
@@ -87,43 +87,42 @@ var Snowflake = (function() {
 		this.y = y;
 		this.vx = vx;
 		this.vy = vy;
-		this.hit = false;
+		this.hit = true;
 		this.div = document.createElement('div');
 		this.div.classList.add('snowflake');
 		this.div.style.width = this.size + 'px';
 		this.div.style.height = this.size + 'px';
 	}
 
-	Snowflake.prototype.move = function() {
+	Snowflake.prototype.move = function () {
 
-			this.x += this.vx + Math.min(Math.max(wind, -10), 10);
-			this.y += this.vy;
+		this.x += this.vx + Math.min(Math.max(wind, -10), 10);
+		this.y += this.vy;
 
 		// Wrap the snowflake to within the bounds of the page
 		if (this.x > window.innerWidth + this.size) {
 			this.x -= window.innerWidth + this.size;
 		}
 
-		if (this.x < -this.size) {
+		if (this.x < this.size) {
 			this.x += window.innerWidth + this.size;
 		}
-
-		if (this.y > window.innerHeight + this.size) {
+		if (this.y > window.innerHeight + this.size * 23) {
 			this.x = Math.random() * window.innerWidth;
-			this.y -= window.innerHeight + this.size * 2;
+			this.y -= window.innerHeight + this.size * 20;
 		}
 
 	};
 
-	Snowflake.prototype.draw = function() {
+	Snowflake.prototype.draw = function () {
 		this.div.style.transform =
-		this.div.style.MozTransform =
-		this.div.style.webkitTransform =
+			this.div.style.MozTransform =
+			this.div.style.webkitTransform =
 			'translate3d(' + this.x + 'px' + ',' + this.y + 'px,0)';
 	};
 
 	function update() {
-		for (var i = flakes.length; i--; ) {
+		for (var i = flakes.length; i--;) {
 			var flake = flakes[i];
 			flake.move();
 			flake.draw();
@@ -131,10 +130,10 @@ var Snowflake = (function() {
 		requestAnimationFrame(update);
 	}
 
-	Snowflake.init = function(container) {
+	Snowflake.init = function (container) {
 		flakes = [];
 
-		for (var i = flakesTotal; i--; ) {
+		for (var i = flakesTotal; i--;) {
 			var size = (Math.random() + 0.2) * 12 + 1;
 			var flake = new Snowflake(
 				size,
@@ -146,25 +145,23 @@ var Snowflake = (function() {
 			container.appendChild(flake.div);
 			flakes.push(flake);
 		}
-    
 
 
-	  
-  	window.ondeviceorientation = function(event) {
-	  	if (event) {
-		  	wind = event.gamma / 10;
-  		}
-  	};
-    
-  	update();
+		window.ondeviceorientation = function (event) {
+			if (event) {
+				wind = event.gamma / 10;
+			}
+		};
+
+		update();
 	};
 
 	return Snowflake;
 
 }());
 
-window.onload = function() {
-  setTimeout(function() {
-  	Snowflake.init(document.getElementById('snow'));
-  }, 500);
+window.onload = function () {
+	setTimeout(function () {
+		Snowflake.init(document.getElementById('snow'));
+	}, 500);
 }
