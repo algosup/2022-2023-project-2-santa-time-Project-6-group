@@ -6,6 +6,7 @@
 body {
     background-color: #58BD59;
     overflow-x: hidden;
+    margin: 0;
 }
 
 p {
@@ -69,7 +70,7 @@ img.flag {
     background-color: #fff;
     color: #58BD59;
     font-size: 1.5vw;
-    width: 23vw;
+    width: 40vw;
     text-align: center;
     height: 3vw;
     margin-left: -5vw;
@@ -79,6 +80,7 @@ img.flag {
 {
     display: flex;
     justify-content: space-around;
+    margin-top: 2vh;
 }
 
 .userInput input#userInput::placeholder {
@@ -93,6 +95,7 @@ button#button {
     height: 3vw;
     border: none;
     margin-left: 1vw;
+    border-radius: 6px;
 }
 
 
@@ -145,6 +148,7 @@ footer .footerText .links {
     display: flex;
     justify-content: space-around;
     text-decoration: none;
+    margin-top: 1vh;
 }
 
 .links a {
@@ -156,6 +160,7 @@ footer .footerText .links {
 
 footer .footerText #SantaHead {
     margin-right: 1vw;
+    margin-top: 3vh;
     width: 2.5vh;
 }
 
@@ -167,7 +172,17 @@ footer .footerNotes {
 
 footer .footerNotes p#copyright {
     margin: 0;
-    margin-top: 1vh;
+    margin-top: 3vh;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 11vh;
+    background-color: #32794B;
+    margin-left: 0px;
+    display: grid;
 }
 
 .snowflake {
@@ -242,4 +257,8 @@ footer .footerNotes p#copyright {
 
     }
     
+}
+
+.SantaMessage, #remainingNumbers, #remainingDays {
+    display: grid;
 }
