@@ -27,12 +27,12 @@ function Search(input) {
         }
     }
 }
-var input = document.getElementById("userInput");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    Search(input.value)
-  }
-});
+// var input = document.getElementById("userInput");
+// input.addEventListener("keypress", function(event) {
+//   if (event.key === "Enter") {
+//     Search(input.value)
+//   }
+// });
 function getFractYear() {
 	var fractYear;
 	var now = new Date();
