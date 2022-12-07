@@ -1,264 +1,596 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
-* {
-    font-family: 'Montserrat', sans-serif;
-}
-
-body {
-    background-color: #58BD59;
-    overflow-x: hidden;
-    margin: 0;
-}
-
-p {
-    color: #fff;
-}
-
-h1 {
-    color: #fff;
-}
-
-header {
-    color : #fff;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.flags {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.flags img#flag {
-    width: 2.5vw;
-    margin-left: 1vh;
-}
-
-.titles {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-p.SantaMessage {
-    margin: 0;
-}
-
-.hatOnText {
-    margin-left: -5vw;
-}
-
-h1.userInput {
-    margin: 0;
-}
-
-img.flag {
-    position: absolute;
-    width: 2.5vw;
-    margin-left: 0.15vh;
-    margin-top: -1.2vh;
-}
-
-.userInput {
-    display: flex;
-    justify-content: center;
-}
-
-.userInput input#userInput {
-    border: none;
-    background-color: #fff;
-    color: #58BD59;
-    font-size: 1.5vw;
-    width: 40vw;
-    text-align: center;
-    height: 3vw;
-    margin-left: -5vw;
-}
-
-.secondLayer
-{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2vh;
-}
-
-.userInput input#userInput::placeholder {
-    color: #58BD59;
-}
-
-button#button {
-    background-color: #3d883e;
-    color: #fff;
-    font-size: 1.5vw;
-    width: 50%;
-    height: 3vw;
-    border: none;
-    margin-left: 1vw;
-    border-radius: 6px;
-}
-
-
-button#button:hover {
-    background: #419642;
-    transform: scale(1.1);
-    transition: 0.5s;
-}
-
-
-.time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-p#remainingNumbers {
-    display: flex;
-    justify-content: space-around;
-}
-
-.mapHolder img#map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5vh;
-    line-height: 2.5vh;
-    background-color: #58BD59;
-    color: #fff;
-    text-align: center;
-}
-
-footer .footerText .links {
-    display: flex;
-    justify-content: space-around;
-    text-decoration: none;
-    margin-top: 1vh;
-}
-
-.links a {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid #fff;
-}
-
-
-footer .footerText #SantaHead {
-    margin-right: 1vw;
-    margin-top: 3vh;
-    width: 2.5vh;
-}
-
-footer .footerNotes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .footerNotes p#copyright {
-    margin: 0;
-    margin-top: 3vh;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 11vh;
-    background-color: #32794B;
-    margin-left: 0px;
-    display: grid;
-}
-
-.snowflake {
-    position: absolute;
-    display: block;
-    margin-top: -29%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-image: -webkit-radial-gradient(center,
-            circle farthest-corner,
-            rgba(255, 255, 255, 1) 40%,
-            rgba(255, 255, 255, 0) 100%);
-    background-image: -moz-radial-gradient(center,
-            circle farthest-corner,
-            rgba(255, 255, 255, 1) 40%,
-            rgba(255, 255, 255, 0) 100%);
-    background-image: -ms-radial-gradient(center,
-            circle farthest-corner,
-            rgba(255, 255, 255, 1) 40%,
-            rgba(255, 255, 255, 0) 100%);
-    background-image: radial-gradient(center,
-            circle farthest-corner,
-            rgba(255, 255, 255, 1) 40%,
-            rgba(255, 255, 255, 0) 100%);
-}
-
-#snow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-/* create a media query for the screen with less than 430px width */
-@media screen and (max-width: 430px) {
-    .flags img#flag {
-        width: 4.5vw;
-        margin-left: 1vh;
+@media (min-width: 1281px) {
+    
+    .mapHolder img{
+        display: flex !important;
+        margin: auto;
+        height: 55vh
     }
-    h1.userInput {
-        font-size: 4vw;
+    .mapHolder {
+        position: absolute;
+        display: flex !important;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    p.SantaMessage {
-        font-size: 3vw;
+    .userInput {
+        margin-left: 2vw;
+        display: inline-flex;
+        height: 10vh;
     }
-    .timeLeft {
-        font-size: 3vw;
+    .titles {
+        text-align: center;
+        margin-top: 6vh;
+        flex-direction: column;
+        width: 60%;
+        text-align: start !important;
     }
-    input.userInput {
-        width: 100%;
+    input {
+        height: 6vh;
+        width: 45vw !important;
+        margin-top: 3vh;
+        justify-self: baseline !important;
+        font-size: 2.5vh;
     }
-}
-
-@media screen and (max-height: 512px){
-    .mapHolder img#map {
-        top: 10vh;
+    button {
+        height: 6.5vh !important;
+        width: 10vw !important;
+        margin: 3vh 0 0 2vw !important;
+        border-radius: 10px;
+        font-size: 2vh;
     }
-}
-@media screen and (max-height: 280px) { 
-    .mapHolder img#map {
-        top: 35vh;
-        right: 40vw;
-
+    button#button:hover {
+        background: #419642;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .secondLayer {
+        text-align: center;
+        margin-top: 4vh;
+        margin-right: 2vw;
+        position: absolute;
+        top: 1vh;
+        right: 2vw;
+    }
+    #remainingNumbers {
+        font-size: 240%;
+        margin: 3vh 0vw;
+    }
+    .SantaMessage{
+        font-size: 140% !important;
+        margin: 7vh 0 0; 
+    }
+    #remainingDays {
+        font-size: 110%;
+        margin-top: -1vh
+    }
+    footer {
+        height: 10vh !important;
+        width: 100vw;
+        overflow: scroll;
+        font-size: 1vh;
+        width: 100vw !important;
     }
     
 }
 
-.SantaMessage, #remainingNumbers, #remainingDays {
-    display: grid;
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+    .mapHolder img{
+        display: flex !important;
+        margin: auto;
+        height: 55vh
+    }
+    .mapHolder {
+        position: absolute;
+        display: flex !important;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .userInput {
+        height: 10vh;
+        margin-left: 2vw;
+        display: inline-flex
+    }
+    .titles {
+        text-align: center;
+        margin-top: 6vh;
+        flex-direction: column;
+        width: 60%;
+        text-align: start !important;
+    }
+    input {
+        height: 6vh;
+        width: 45vw !important;
+        margin-top: 3vh;
+        justify-self: baseline !important;
+        font-size: 2.5vh;
+    }
+    button {
+        height: 6.5vh !important;
+        width: 10vw !important;
+        margin: 3vh 0 0 2vw !important;
+        border-radius: 10px;
+        font-size: 2vh;
+    }
+    button#button:hover {
+        background: #419642;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .secondLayer {
+        text-align: center;
+        margin-top: 4vh;
+        margin-right: 2vw;
+        position: absolute;
+        top: 1vh;
+        right: 2vw;
+    }
+    #remainingNumbers {
+        font-size: 240%;
+        margin: 3vh 0vw;
+    }
+    .SantaMessage{
+        font-size: 140% !important;
+        margin: 7vh 0 0; 
+    }
+    #remainingDays {
+        font-size: 110%;
+        margin-top: -1vh
+    }
+    footer {
+        height: 10vh !important;
+        overflow: scroll;
+        font-size: 1.2vh;
+        width: 100vw !important;
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+    + map
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    .mapHolder img{
+        display: flex !important;
+        margin: auto;
+        height: 55vh
+    }
+    .mapHolder {
+        position: absolute;
+        display: flex !important;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .userInput {
+        height: 9vh;
+        margin-left: 2vw;
+        display: inline-flex
+    }
+    .titles {
+        text-align: center;
+        margin-top: 6vh;
+        flex-direction: column;
+        width: 60%;
+    }
+    input {
+        height: 6vh;
+        width: 40vw !important;
+        margin-top: 3vh;
+        justify-self: baseline !important;
+        font-size: 2.5vh;
+    }
+    button {
+        height: 6.5vh !important;
+        width: 10vw !important;
+        margin: 3vh 0 0 2vw !important;
+        border-radius: 10px;
+        font-size: 2vh;
+    }
+    button#button:hover {
+        background: #419642;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .secondLayer {
+        text-align: center;
+        margin-top: 4vh;
+        margin-right: 2vw;
+        position: absolute;
+        top: 1vh;
+        right: 2vw;
+    }
+    #remainingNumbers {
+        font-size: 240%;
+        margin: 3vh 0vw;
+    }
+    .SantaMessage{
+        font-size: 140% !important;
+        margin: 7vh 0 0; 
+    }
+    #remainingDays {
+        font-size: 110%;
+        margin-top: -1vh
+    }
+    footer {
+        height: 10vh !important;
+        overflow: scroll;
+        font-size: 1vh;
+        width: 100vw !important;
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .en {
+        right: 8vw !important;
+    }
+    .fr {
+        right: 2vw !important;
+    }
+    .mapHolder {
+      display: none;
+    }
+    div {
+        display: grid; 
+    }
+    .hat {
+        height: 7vh;
+    }
+    .titles {
+        text-align: center;
+        margin-top: 6vh;
+    }
+    input {
+        height: 6vh;
+        width: 60vw;
+        margin-top: 3vh;
+        justify-self: center;
+        font-size: 2.5vh;
+        
+    }
+    button {
+        height: 6vh;
+        width: 50vw;
+        margin: 2vh;
+        border-radius: 10px;
+        justify-self: center;
+        font-size: 2vh
+    }
+    button#button:hover {
+        background: #419642;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .secondLayer {
+        text-align: center;
+        margin-top: 4vh;
+    }
+    #remainingNumbers {
+        font-size: 240%;
+    }
+    .SantaMessage{
+        font-size: 174%
+    }
+    #remainingDays {
+        font-size: 110%;
+        margin-top: -1vh
+    }
+    footer {
+        width: 100vw !important;
+    }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .en {
+        right: 6vw !important;
+    }
+    .fr {
+        right: 1.5vw !important;
+    }
+    .en, .fr {
+        height: 4vh !important;
+    }
+    .mapHolder {
+      display: none;
+    }
+    div {
+        display: grid; 
+    }
+    .titles {
+        text-align: center;
+        margin-top: 2vh;
+    }
+    input {
+        height: 6vh;
+        width: 90vw;
+        margin-top: 3vh;
+        justify-self: center;
+        font-size: 2vh;
+        
+    }
+    button {
+        height: 5vh;
+        width: 70vw;
+        margin: 1vh;
+        border-radius: 10px;
+        justify-self: center;
+        font-size: 2vh
+    }
+    button#button:hover {
+        background: #419642;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .secondLayer {
+        text-align: center;
+        margin-top: 4vh;
+    }
+    #remainingNumbers {
+        font-size: 202%;
+    }
+    .SantaMessage{
+        font-size: 150%
+    }
+    #remainingDays {
+        font-size: 100%;
+        margin-top: -1vh
+    }
+    .userInput {
+        height: 10vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+    footer {
+        font-size: 1.8vh;
+        width: 100vw !important;
+    }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = to 479px
+*/
+
+@media (min-width: 438px) and (max-width: 480px) {
+    
+    .en {
+        right: 10vw !important;
+    }
+    .fr {
+        right: 1.5vw !important;
+    }
+    .en, .fr {
+        height: 4vh !important;
+        top: 2vh !important;
+    }
+    .mapHolder {
+      display: none;
+    }
+    div {
+        display: grid; 
+    }
+    .titles {
+        text-align: center;
+        margin-top: 2vh;
+    }
+    input {
+        height: 6vh;
+        width: 90vw;
+        margin-top: 3vh;
+        justify-self: center;
+        font-size: 2vh;
+        
+    }
+    button {
+        height: 5vh;
+        width: 70vw;
+        margin: 2vh;
+        margin-bottom: 2vh;
+        border-radius: 10px;
+        justify-self: center;
+        font-size: 2vh
+    }
+    button#button:hover {
+        background: #419642;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .secondLayer {
+        text-align: center;
+        margin-top: 4vh;
+    }
+    #remainingNumbers {
+        font-size: 202%;
+        margin-top: 0
+    }
+    .SantaMessage{
+        font-size: 150%;
+        margin-top: 10vh;
+    }
+    #remainingDays {
+        font-size: 100%;
+        margin-top: -1vh
+    }
+    .userInput {
+        height: 8vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hat {
+        margin-top: 3vh;
+    }
+    footer {
+        font-size: 1.8vh;
+    }
+  
+}
+
+@media (max-width: 437px){
+    
+    .en {
+        right: 10vw !important;
+    }
+    .fr {
+        right: 1.5vw !important;
+    }
+    .en, .fr {
+        height: 4vh !important;
+        top: 2vh !important;
+    }
+    .mapHolder {
+      display: none;
+    }
+    div {
+        display: grid; 
+    }
+    .titles {
+        /* text-align: center; */
+        margin-top: 2vh;
+    }
+    input {
+        height: 6vh;
+        width: 80vw;
+        margin-top: 3vh;
+        justify-self: center;
+        font-size: 2vh;
+        display: block;
+    }
+    button {
+        height: 5vh;
+        width: 70vw;
+        margin: 2vh;
+        margin-bottom: 2vh;
+        border-radius: 10px;
+        justify-self: center;
+        font-size: 2vh
+    }
+    button#button:hover {
+        background: #419642;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .secondLayer {
+        text-align: center;
+        margin-top: 4vh;
+    }
+    #remainingNumbers {
+        font-size: 202%;
+        margin-top: 0
+    }
+    .SantaMessage{
+        font-size: 150%;
+        margin-top: 10vh;
+    }
+    #remainingDays {
+        font-size: 100%;
+        margin-top: -1vh
+    }
+    .userInput {
+        height: 8vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hat {
+        margin-top: 3vh;
+        height: 5vh;
+    }
+    footer {
+        font-size: 1.8vh;
+    }
+}
+
+
+body {
+    background-color: #5ac05b;
+    color: #E9E9E9;
+    font-family: Montserrat, sans-serif;
+    margin: 0px
+}
+
+input {
+    background-color: #E9E9E9;
+    border: 0px;
+}
+
+input::placeholder {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    color: #58BD59;
+}
+
+button {
+    background-color: #32794B;
+    color: #E9E9E9;
+    border: 0px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 16vh;
+    background-color: #32794B;
+    margin-left: 0px;
+    display: grid !important;
+}
+
+#copyright {
+    text-align: center;
+}
+
+a {
+    color: #E9E9E9;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5vh
+}
+
+.fr, .en{
+    position: absolute;
+    height: 5vh;
+    top: 3vh;
+}
+.fr { 
+    right: 1vw;  
+}
+
+.en {
+    right: 5vw;  
+}
+
+#snow {
+    z-index: -2;
 }
