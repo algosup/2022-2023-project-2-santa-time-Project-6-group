@@ -10,15 +10,14 @@
     <link rel="stylesheet" type="text/css" href="/css/SantaClock.css">
 </head>
 
-<script src="/js/SantaClock.js"></script>
 
 <body>
     <div id="snow"></div>
     <content>
         <header>
             <div class="flags lang">
-                <img id="flag" class="fr" src="/img/FR.png">
-                <img id="flag" class="en" src="/img/UK.png">
+                <img id="flag" class="fr" src="/img/FR.png" onclick="Language('FR')">
+                <img id="flag" class="en" src="/img/UK.png" onclick="Language('UK')">
             </div>
         </header>
         <div class="titles">
@@ -26,17 +25,17 @@
                 <img src="/img/hat.png" class="userInput hat">
             </div>
             <div class="userInput">
-                <input type="text" id="userInput" placeholder="Enter your postal adress" maxlength="70"
-                    spellcheck="true" oninput="this.value = this.value.replace(/[^a-zA-Z0-9 ]/g, '')">
+                <input type="text" id="userInput" placeholder="Write your city, postal code and country" maxlength="70"
+                spellcheck="true" oninput="this.value = this.value.replace(/[^a-zA-Z0-9 ]/g, '')">
                 <button onclick="Search(document.getElementById('userInput').value)" id="button">Search</button>
             </div>
-            
+            <div id="errorMessage">We can't find your city, are you sure you used the correct format?</div>
         </div>
         <div class="secondLayer">
             
             <div class="time">
                 <div class="timeLeft">
-                    <p class="SantaMessage">Santa Claus will be there in</p>
+                    <p class="SantaMessage" id="Message">Santa Claus will be there in</p>
                     <p id="remainingNumbers">00 : 00 : 00 : 00</p>
                     <p id="remainingDays">Days : Hours : Minutes : Seconds</p>
                 </div>
@@ -45,25 +44,28 @@
         <div class="mapHolder">
             <img src="img/Map1.png" id="map" draggable="false">
         </div>
-
-
+        
+        
         
         <footer>
             <div class="footerText">
+                <p id="data" style="text-align: center;">Be assured we do not save any data</p>
                 <div class="links">
-                    <a href="https://algosup.com">ALGOSUP</a>
+                    <a href="https://algosup.com" id="ALGOSUP">ALGOSUP</a>
                     <a href="/static/Licenses.html">LICENSES</a>
-                    <a href="#">Give us your feedback</a>
-
+                    <a href="#" id="feedback">Give us your feedback</a>
+                    
                 </div>
                 <div class="footerNotes">
-<!--                    <img src="/img/Santa.png" id="SantaHead">-->
+                    <!--                    <img src="/img/Santa.png" id="SantaHead">-->
                     <p id="copyright">© 2022 SantaClock ALGOSUP, Inc</p>
                 </div>
             </div>
         </footer>
     </content>
-
+    
 </body>
 
+<script src="/js/SantaClock.js"></script>
+<script src="/js/Snowflakes.js"></script>
 </html>

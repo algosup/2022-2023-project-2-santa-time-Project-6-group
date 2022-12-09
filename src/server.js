@@ -36,6 +36,6 @@ app.get('/License', function (req, res,html) {
 // Serve http directly
 const http = require('http');
 const server = http.createServer(app);
-server.listen(port, () => console.log(`Listening on port ${port}`));
+server.listen(port, () => console.log(`Listening on port: http://127.0.0.1:${port}`));
 
 
