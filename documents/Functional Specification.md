@@ -327,7 +327,7 @@ Greenwich, UK, will be the first place where Santa will come.
 
 - The page must be scalable, with the ability to handle a large number of tasks and activities without performance degradation
 
--The page must be fast and responsive, with minimal loading times
+- The page must be fast and responsive, with minimal loading times
 
 <br>
 
