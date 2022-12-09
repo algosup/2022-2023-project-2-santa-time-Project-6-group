@@ -22,12 +22,14 @@
 - [Personas](#personas)
 - [Scenarios](#scenarios)
 - [Fonctionalities](#fonctionalities)
-   - [Non-goals](#non-goals)
    - [Design](#design)
    - [Mockups](#system-interface)
       - [index.html](#indexhtml)
       - [404.html](#404html)
+   -[Translation](#translation)
 - [Details](#details)
+- [Non-functional requirements](#non-functional-requirements)
+- [Non-goals](#non-goals)
 - [Security](#security)
 - [Promotion campaign](#promotion-campaign)
    - [Social media](#social-media)
@@ -169,17 +171,6 @@ We have decided that the user will not have to write his all address because, in
 
 The website has to be responsive[^responsive] to be multi-screen friendly.
 
-## Non-Goals
-
-
-<br>
-
-- Save the input
-
-- Autocompletion of the input
-
-- Other dates
-
 <br>
 
 ## Design
@@ -253,6 +244,31 @@ When the user writes the wrong HTTP address on the search bar, he will find an e
 
 <br>
 
+## Translation
+
+Title: EN -> Enter a postal address - FR -> Entrer une adresse postale.
+
+Placeholder: EN -> Write your town, postal code and country - FR -> Ecrivez votre ville, code postal et pays.
+
+Button: EN -> Search - FR -> Rechercher.
+
+Error message: EN -> Are you sure you have written an existing address? - FR -> Êtes-vous sûr d'avoir écrit une adresse existante?
+
+Countdown: EN -> Santa Claus will be there in - FR -> Le Père Noël sera là dans.
+
+Time: EN -> Days, Hours, Minutes, Seconds - FR -> Jours, Heures, Minutes, Secondes.
+
+Santa here: EN -> Santa is here! - FR -> Le Père Noël est là! 
+
+Footer: EN -> Give us your feedback - FR -> Donnez-nous votre avis.
+
+404 page: EN -> Oops! Santa no found! - FR -> Oups! Je n'est pas trouvé le père noël!
+
+   EN -> Try this page. - FR -> Essaie cette page. 
+
+
+
+
 # Details
 
 <br>
@@ -302,6 +318,29 @@ We don't want to use the time to know when Santa will be there. We want you to u
 So, Santa will arrive when the sun is in the exact opposite position of the address.
 
 Greenwich, UK, will be the first place where Santa will come.
+
+<br>
+
+# Non-functional requirements
+
+- The page must be accessible, with support for users with disabilities and special needs
+
+- The page must be scalable, with the ability to handle a large number of tasks and activities without performance degradation
+
+- The page must be fast and responsive, with minimal loading times
+
+<br>
+
+# Non-Goals
+
+
+- There is no need to save any data.
+
+- For the moment, the autocompletion of the input is not required.
+
+- We want to focus on Christmas, so it's not required to put a countdown on other dates.
+
+- The feature to put Santa's head on the map following the address is also out-of-scope for now.
 
 <br>
 
