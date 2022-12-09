@@ -16,33 +16,34 @@
     <div id="snow"></div>
     <content>
         <header>
-            <div class="flags">
-                <img id="flag" src="/img/FR.png">
-                <img id="flag" src="/img/UK.png">
+            <div class="flags lang">
+                <img id="flag" class="fr" src="/img/FR.png">
+                <img id="flag" class="en" src="/img/UK.png">
             </div>
         </header>
         <div class="titles">
             <div class="hatOnText">
-                <img src="/img/SantaHat.png" class="flag">
-                <h1 class="userInput">Enter a postal adress:</h1>
+                <img src="/img/hat.png" class="userInput hat">
             </div>
-            <p class="SantaMessage">Santa Claus will be there in</p>
-        </div>
-        <div class="secondLayer">
             <div class="userInput">
                 <input type="text" id="userInput" placeholder="Enter your postal adress" maxlength="70"
                     spellcheck="true" oninput="this.value = this.value.replace(/[^a-zA-Z0-9 ]/g, '')">
                 <button onclick="Search(document.getElementById('userInput').value)" id="button">Search</button>
             </div>
+            
+        </div>
+        <div class="secondLayer">
+            
             <div class="time">
                 <div class="timeLeft">
+                    <p class="SantaMessage">Santa Claus will be there in</p>
                     <p id="remainingNumbers">00 : 00 : 00 : 00</p>
                     <p id="remainingDays">Days : Hours : Minutes : Seconds</p>
                 </div>
             </div>
         </div>
         <div class="mapHolder">
-            <img src="/img/Map.png" id="map" draggable="false">
+            <img src="img/Map1.png" id="map" draggable="false">
         </div>
 
 
@@ -56,7 +57,7 @@
 
                 </div>
                 <div class="footerNotes">
-                    <img src="/img/Santa.png" id="SantaHead">
+<!--                    <img src="/img/Santa.png" id="SantaHead">-->
                     <p id="copyright">© 2022 SantaClock ALGOSUP, Inc</p>
                 </div>
             </div>
