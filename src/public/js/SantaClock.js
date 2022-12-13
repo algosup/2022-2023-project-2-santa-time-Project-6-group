@@ -1,40 +1,83 @@
 
-var address = {
-	address1: { addressName: "28 rue Jean Baptiste Leclerc", longitude: 2.42957, Country: "France", timezone: 1 },
-	address2: { addressName: "15 Rue Neuve", longitude: 4.35456, Country: "Belgium", timezone: 1 },
-	address3: { addressName: "Allée George Charpak", longitude: 2.07118, Country: "France", timezone: 1 },
-	address4: { addressName: "Aubigny", longitude: 2.4401326746767062, Country: "FR", timezone: 1 },
-	address5: { addressName: "Bourges", longitude: 2.400355675172844, latitude: 47.08128689938308, Country: "FR", timezone: 1 },
-	address6: { addressName: "Ouelen", longitude: -169.81217717912574, latitude: 66.1653823669088, Country: "Russia", timezone: 1 },
-	address7: { addressName: "test", longitude: 10.069208039834148, latitude: 2.045227812481695, Country: "test", timezone: 1 }
-};
+// function to connect to the API + searching inside database for specific city
+
+
+
+
+
 var interval;
+
 function Search(input) {
+	document.getElementById("remainingNumbers").innerHTML="00 : 00 : 00 : 00"
 	if (!input) {
-		alert('Please, enter a location in this format : "address, country "')
+		document.getElementById("errorMessage").style.display = "block"
 	} else {
-		var isFound=false
-		for (const location in address) {
-			var name = input.split(", ")[0]
-			var country = input.split(", ")[1]
-			if (name == address[location].addressName && country == address[location].Country) {
-				setInterval(function () {
-					var RemainingTime = SantArrival(address[location].longitude, address[location].timezone)
-					document.getElementById("remainingNumbers").innerHTML = RemainingTime[0] + " : " + RemainingTime[1] + " : " + RemainingTime[2] + " : " + RemainingTime[3] + ""
-				}, 1000)
-				
-			}
+		if (interval === 'undefined') {
+			InitInterval(input);
+		} else {
+			clearInterval(interval);
+			InitInterval(input);
+
 		}
-		if(isFound==false){
-			document.getElementById("errorMessage").style.display="block"
-		}else{
-			document.getElementById("errorMessage").style.display="none"
+
+	}
+}
+async function InitInterval(input) {
+	var isFound = false
+	if (input) {
+		var city = input.split(", ")[0]
+		var postcode = input.split(", ")[1]
+		postcode=postcode.replaceAll(' ', '');
+		city=city.replaceAll(' ', '');
+
+		var longitude = async function connect(filters) {
+			var city = 0.000000000;
+			console.log("connecting with filters :", filters)
+			var fetching = await fetch("http://20.229.204.94/api?q=" + filters[0] + "/" + filters[1])
+				.then(res => res.json())
+				.then((responseData) => {
+					// loop to search every through every city in API's link
+					for (var i = 0; i < responseData.features.length; i++) {
+
+						// if the city is found
+						if (responseData.features[i].properties.postcode == filters[1]) {
+							city = responseData.features[i].geometry.coordinates[0]
+						}
+					}
+				}
+
+
+				)
+			console.log(city)
+			return city
+		}
+		var location = await longitude([city, postcode])
+
+		console.log("longitude =", location)
+		if (location != 0.000000000) {
+			isFound = true
+			interval = setInterval(function () {
+				var RemainingTime = SantArrival(location)
+				document.getElementById("remainingNumbers").innerHTML = RemainingTime[0] + " : " + RemainingTime[1] + " : " + RemainingTime[2] + " : " + RemainingTime[3] + ""
+			}, 1000)
+		} else {
+			if (isFound == false) {
+				console.log("error")
+				document.getElementById("errorMessage").style.display = "block"
+			} else {
+				document.getElementById("errorMessage").style.display = "none"
+			}
+
 		}
 	}
+
+
+
 }
 
 
-	 		 
+
+
 function getFractYear() {
 	var fractYear;
 	var now = new Date();
@@ -48,10 +91,10 @@ function getFractYear() {
 	}
 	return fractYear
 }
-function SolarTime(longitude, timezone) {
+function SolarTime(longitude) {
 	var fractYear = getFractYear()
 	var eqtime = 229.18 * (0.000075 + (0.001868 * Math.cos(fractYear)) - (0.032077 * Math.sin(fractYear)) - (0.014615 * Math.cos(2 * fractYear)) - (0.040849 * Math.sin(2 * fractYear)));
-	time_offset = eqtime + 4 * longitude - 60 * timezone
+	time_offset = eqtime + 4 * longitude - 60
 	date = new Date()
 
 
@@ -59,11 +102,12 @@ function SolarTime(longitude, timezone) {
 	var tsth = parseInt(tst / 60)
 	var tstm = parseInt(tst - (tsth * 60))
 	var tsts = parseInt((tst - tstm - (tsth * 60)) * 60)
+
 	return [tsth, tstm, tsts]
 }
 
-function SantArrival(longitude, timezone) {
-	var st = SolarTime(longitude, timezone)
+function SantArrival(longitude) {
+	var st = SolarTime(longitude)
 	var hours = 24 - (st[0])
 	var minutes = 60 - st[1]
 	var seconds = 60 - st[2]
@@ -86,37 +130,34 @@ function Language(language) {
 	var input = document.getElementById("userInput");
 	var button = document.getElementById("button");
 	var Remaining = document.getElementById("remainingDays");
-	var data = document.getElementById("data")
 	var feedback = document.getElementById("feedback")
-	var error= document.getElementById("errorMessage")
+	var error = document.getElementById("errorMessage")
 	switch (language) {
 		case "FR":
 			SantaMessage.innerHTML = "Le père noël sera là dans:"
-			input.placeholder = "Écrivez votre ville, code postal et pays"
+			input.placeholder = "Écrivez votre ville et votre code postal"
 
 			button.innerHTML = "Rechercher"
 
 			Remaining.innerHTML = "Jours : Heures : Minutes : Secondes"
 
-			data.innerHTML = "Nous ne sauvegardons aucune donnée."
 
-			feedback.innerHTML="Donnez nous votre avis"
+			feedback.innerHTML = "Donnez nous votre avis"
 
-			error.innerHTML="Nous n'avons pas trouvé votre ville, êtes vous sûr d'avoir utiliser le bon format?"
+			error.innerHTML = "Nous n'avons pas trouvé votre ville, êtes vous sûr d'avoir utiliser le bon format?"
 			break;
 		case "UK":
-			SantaMessage.innerHTML = "Santa Claus will be there in:"
-			input.placeholder = "Write your city, postal code and country"
+			SantaMessage.innerHTML = "Santa Claus will be there in"
+			input.placeholder = "Write your city and postal code"
 
 			button.innerHTML = "Search"
 
 			Remaining.innerHTML = "Days : Hours : Minutes : Seconds"
 
-			data.innerHTML = "Be assured, we do not save any data."
 
-			feedback.innerHTML="Give us your feedback"
+			feedback.innerHTML = "Give us your feedback"
 
-			error.innerHTML="We can't find your city, are you sure you used the correct format?"
+			error.innerHTML = "We can't find your city, are you sure you used the correct format?"
 
 
 			break;
@@ -126,17 +167,17 @@ function Language(language) {
 var input = document.getElementById("userInput");
 input.addEventListener("keypress", function (event) {
 	if (event.key === "Enter") {
-		document.getElementById('errorMessage').style.display='none';
+		document.getElementById('errorMessage').style.display = 'none';
 		Search(input.value)
 	}
-	
+
 });
-input.addEventListener("click",function(){
-	document.getElementById('errorMessage').style.display='none';
+input.addEventListener("click", function () {
+	document.getElementById('errorMessage').style.display = 'none';
 })
-input.oninput=function(){
-	document.getElementById('errorMessage').style.display='none';
-}	
+input.oninput = function () {
+	document.getElementById('errorMessage').style.display = 'none';
+}
 	// map function WIP
 // 	function MapCoordinates(longitude, latitude){
 // 		var map=document.getElementById("map")	
