@@ -9,7 +9,7 @@ var interval;
 
 function Search(input) {
 	document.getElementById("remainingNumbers").innerHTML="00 : 00 : 00 : 00"
-	if (!input) {
+	if (!input || !input.includes(',')) {
 		document.getElementById("errorMessage").style.display = "block"
 	} else {
 		if (interval === 'undefined') {
