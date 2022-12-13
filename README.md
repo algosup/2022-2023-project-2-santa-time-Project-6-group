@@ -1,6 +1,10 @@
 # 2022-2023-project-2-santa-time-Project-6-group
 
-Team:
+## Overview:
+
+This is the repository for the group 6 's project for ALGOSUP. This project aims to concetualise, build and promote a robust and elastic platform to handle peak load.
+
+## Team:
 
 <img src="https://avatars.githubusercontent.com/arthur-lemo1ne" width="60" height="60" /> Arthur Lemoine (Project manager)
 
@@ -12,8 +16,15 @@ Team:
 
 <img src="https://avatars.githubusercontent.com/LucienLAVATINE" width="60" height="60" /> Lucien Lavatine (Quality assurance)
 
+
+## Documents
+
+[Functionnal Specifications](./documents/Functional%20Specification.md)
+
+[Technical Specifications](./documents/Technical%20Specification.md)
+
 ## Tools
 
-[forecast planning](https://docs.google.com/spreadsheets/d/1TxNVFZbkZaZi0UHTbuXbjm7T8tmfC888-yMdkyPQKmY/edit#gid=0)
+[Forecast planning](https://docs.google.com/spreadsheets/d/1TxNVFZbkZaZi0UHTbuXbjm7T8tmfC888-yMdkyPQKmY/edit#gid=0)
 
 [Trello](https://trello.com/b/FmvYeenz/santa-time)
