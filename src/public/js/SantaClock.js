@@ -1,14 +1,10 @@
-
-// function to connect to the API + searching inside database for specific city
-
-
-
-
-
 var interval;
 
+function SantaIsHere() {
+	document.getElementById("here").style.display="block"
+}
+
 function Search(input) {
-	document.getElementById("remainingNumbers").innerHTML="00 : 00 : 00 : 00"
 	if (!input || !input.includes(',')) {
 		document.getElementById("errorMessage").style.display = "block"
 	} else {
@@ -25,14 +21,13 @@ function Search(input) {
 async function InitInterval(input) {
 	var isFound = false
 	if (input) {
-		var city = input.split(", ")[0]
-		var postcode = input.split(", ")[1]
-		postcode=postcode.replaceAll(' ', '');
-		city=city.replaceAll(' ', '');
+		var city = input.split(",")[0]
+		var postcode = input.split(",")[1]
+		postcode = postcode.replaceAll(' ', '');
+		city = city.replaceAll(' ', '');
 
 		var longitude = async function connect(filters) {
 			var city = 0.000000000;
-			console.log("connecting with filters :", filters)
 			var fetching = await fetch("http://20.229.204.94/api?q=" + filters[0] + "/" + filters[1])
 				.then(res => res.json())
 				.then((responseData) => {
@@ -48,21 +43,24 @@ async function InitInterval(input) {
 
 
 				)
-			console.log(city)
 			return city
 		}
 		var location = await longitude([city, postcode])
 
-		console.log("longitude =", location)
 		if (location != 0.000000000) {
 			isFound = true
+			
 			interval = setInterval(function () {
 				var RemainingTime = SantArrival(location)
-				document.getElementById("remainingNumbers").innerHTML = RemainingTime[0] + " : " + RemainingTime[1] + " : " + RemainingTime[2] + " : " + RemainingTime[3] + ""
+				document.getElementById("remainingNumbers").innerHTML = RemainingTime[0] + " : " + RemainingTime[1] + " : " + RemainingTime[2] + " : " + RemainingTime[3]
+				if (document.getElementById("remainingNumbers").innerHTML == "00 : 00 : 00 : 00") {
+					SantaIsHere()
+					clearInterval(interval);
+				}
 			}, 1000)
+
 		} else {
 			if (isFound == false) {
-				console.log("error")
 				document.getElementById("errorMessage").style.display = "block"
 			} else {
 				document.getElementById("errorMessage").style.display = "none"
@@ -132,15 +130,17 @@ function Language(language) {
 	var Remaining = document.getElementById("remainingDays");
 	var feedback = document.getElementById("feedback")
 	var error = document.getElementById("errorMessage")
+	var hat = document.getElementById("hat")
 	switch (language) {
 		case "FR":
 			SantaMessage.innerHTML = "Le père noël sera là dans:"
-			input.placeholder = "Écrivez votre ville et votre code postal"
+			input.placeholder = "Écrivez votre ville, votre code postal"
 
 			button.innerHTML = "Rechercher"
 
 			Remaining.innerHTML = "Jours : Heures : Minutes : Secondes"
 
+			hat.src = "/img/French-Hat.png"
 
 			feedback.innerHTML = "Donnez nous votre avis"
 
@@ -148,12 +148,13 @@ function Language(language) {
 			break;
 		case "UK":
 			SantaMessage.innerHTML = "Santa Claus will be there in"
-			input.placeholder = "Write your city and postal code"
+			input.placeholder = "Write your city, postal code"
 
 			button.innerHTML = "Search"
 
 			Remaining.innerHTML = "Days : Hours : Minutes : Seconds"
 
+			hat.src = "/img/hat.png"
 
 			feedback.innerHTML = "Give us your feedback"
 
@@ -194,16 +195,12 @@ input.oninput = function () {
 // 		var mapLatBottomDegree = mapLatBottom * Math.PI / 180;	
 
 
-// 		console.log("lat originiale="+latitude)
-// 		console.log("lat="+latLong[1])
 // 		//pin's position on map by using percentage and origin's position 
 // 		var mercatorMax=20037508.3427892*2
 // 		var x2=(latLong[1]*100)/mercatorMax
 // 		var y2=(latLong[0]*100)/mercatorMax
-// 		console.log("%="+y2)
 // 		x2=x2*(origin[0])
 // 		y2=y2*(origin[1])
-// 		console.log("pos="+y2+"pos origin="+origin[1])
 // 	document.getElementById("test").style.left=x+"px"
 // 	document.getElementById("test").style.top=y+"px"
 

@@ -6,13 +6,13 @@
 @media (min-width: 1281px) {
     
     .mapHolder img{
-        display: flex !important;
+        display: flex ;
         margin: auto;
         height: 55vh;
     }
     .mapHolder {
         position: absolute;
-        display: flex !important;
+        display: flex ;
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -685,4 +685,10 @@ footer{
 }
 #userInput{
     text-align: center;
+}
+#here {
+    color: red;
+    font-size: 30px;
+    z-index: 2;
+    display: none;
 }

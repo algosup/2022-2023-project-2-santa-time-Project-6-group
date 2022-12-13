@@ -22,10 +22,10 @@
         </header>
         <div class="titles">
             <div class="hatOnText">
-                <img src="/img/hat.png" class="userInput hat">
+                <img src="/img/hat.png" class="userInput hat" id="hat">
             </div>
             <div class="userInput">
-                <input type="text" id="userInput" placeholder="Write your city and postal code" maxlength="70"
+                <input type="text" id="userInput" placeholder="Write your city, postal code" maxlength="70"
                 spellcheck="true" oninput="this.value = this.value.replace(/[^a-zA-Z0-9 ]/g, '')">
                 <button onclick="Search(document.getElementById('userInput').value)" id="button">Search</button>
             </div>
@@ -38,10 +38,11 @@
                     <p class="SantaMessage" id="Message">Santa Claus will be there in</p>
                     <p id="remainingNumbers">00 : 00 : 00 : 00</p>
                     <p id="remainingDays">Days : Hours : Minutes : Seconds</p>
+                    <p id="here"> Santa is here!</p>
                 </div>
             </div>
         </div>
-        <div class="mapHolder">
+        <div class="mapHolder" id="MapHolder">
             <img src="/img/Map1.png" id="map" draggable="false">
         </div>
         
