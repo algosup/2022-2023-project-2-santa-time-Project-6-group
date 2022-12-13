@@ -577,6 +577,11 @@ input::placeholder {
     color: #58BD59;
 }
 
+input:valid {
+    background-color: #E9E9E9;
+    color: #58BD59;
+}
+
 button {
     background-color: #32794B;
     color: #E9E9E9;
@@ -619,6 +624,7 @@ a {
     top: 3vh;
     z-index: 10;
 }
+
 .fr { 
     right: 1vw;  
 }
