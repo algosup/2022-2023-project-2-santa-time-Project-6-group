@@ -590,14 +590,16 @@ footer {
     height: 16vh;
     background-color: #32794B;
     margin-left: 0px;
-    display: grid !important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 #ALGOSUP{
     margin-top: -1vh;
 }
-#feedback, #copyright{
+/* #feedback, #copyright{
     margin-top: -0.1vh;
-}
+} */
 
 #copyright {
     text-align: center;
@@ -608,7 +610,7 @@ a {
     text-decoration: none;
     display: flex;
     justify-content: space-around;
-    margin: 0.5vh
+    /* margin: 0.5vh */
 }
 
 .fr, .en{

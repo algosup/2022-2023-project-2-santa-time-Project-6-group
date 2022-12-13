@@ -1,0 +1,18 @@
+body {
+    background-color: #58bd59;
+    color: #E9E9E9;
+    text-align: center;
+}
+
+i {
+    text-align: start !important;
+    font-size: 30px;
+    text-decoration: none;
+    color: #E9E9E9;
+    margin: 20px 0 0 20px;
+}
+
+a{
+    display: grid;
+    text-decoration: none;
+}
