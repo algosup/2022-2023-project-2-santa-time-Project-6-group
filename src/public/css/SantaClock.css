@@ -4,24 +4,27 @@
 */
 
 @media (min-width: 1281px) {
-    
-    .mapHolder img{
-        display: flex ;
+
+    .mapHolder img {
+        display: flex;
         margin: auto;
         height: 55vh;
     }
+
     .mapHolder {
         position: absolute;
-        display: flex ;
+        display: flex;
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .userInput {
         margin-left: 2vw;
         display: inline-flex;
         height: 10vh;
     }
+
     .titles {
         text-align: center;
         margin-top: 6vh;
@@ -29,6 +32,7 @@
         width: 60%;
         text-align: start !important;
     }
+
     input {
         height: 6vh;
         width: 45vw !important;
@@ -36,6 +40,7 @@
         justify-self: baseline !important;
         font-size: 2.5vh;
     }
+
     button {
         height: 6.5vh !important;
         width: 10vw !important;
@@ -43,11 +48,13 @@
         border-radius: 10px;
         font-size: 2vh;
     }
+
     button#button:hover {
         background: #419642;
         transform: scale(1.1);
         transition: 0.5s;
     }
+
     .secondLayer {
         text-align: center;
         margin-top: 4vh;
@@ -56,18 +63,22 @@
         top: 1vh;
         right: 2vw;
     }
+
     #remainingNumbers {
         font-size: 240%;
         margin: 3vh 0vw;
     }
-    .SantaMessage{
+
+    .SantaMessage {
         font-size: 140% !important;
-        margin: 7vh 0 0; 
+        margin: 7vh 0 0;
     }
+
     #remainingDays {
-        font-size: 110%;
+        font-size: 120%;
         margin-top: -1vh
     }
+
     footer {
         height: 10vh !important;
         width: 100vw;
@@ -75,10 +86,12 @@
         font-size: 1vh;
         width: 100vw !important;
     }
-    footer a{
+
+    footer a {
         margin-top: -0.3vh;
     }
-    .hat{
+
+    .hat {
         margin-left: 3vw;
     }
 }
@@ -89,14 +102,16 @@
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .en{
+    .en {
         margin-right: 3vw;
     }
-    .mapHolder img{
+
+    .mapHolder img {
         display: flex !important;
         margin: auto;
         height: 55vh
     }
+
     .mapHolder {
         position: absolute;
         display: flex !important;
@@ -104,11 +119,13 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .userInput {
         height: 10vh;
         margin-left: 2vw;
         display: inline-flex
     }
+
     .titles {
         text-align: center;
         margin-top: 6vh;
@@ -116,6 +133,7 @@
         width: 60%;
         text-align: start !important;
     }
+
     input {
         height: 6vh;
         width: 45vw !important;
@@ -123,6 +141,7 @@
         justify-self: baseline !important;
         font-size: 2.5vh;
     }
+
     button {
         height: 6.5vh !important;
         width: 10vw !important;
@@ -130,11 +149,13 @@
         border-radius: 10px;
         font-size: 2vh;
     }
+
     button#button:hover {
         background: #419642;
         transform: scale(1.1);
         transition: 0.5s;
     }
+
     .secondLayer {
         text-align: center;
         margin-top: 4vh;
@@ -143,25 +164,29 @@
         top: 1vh;
         right: 2vw;
     }
+
     #remainingNumbers {
         font-size: 240%;
         margin: 3vh 0vw;
     }
-    .SantaMessage{
+
+    .SantaMessage {
         font-size: 140% !important;
-        margin: 7vh 0 0; 
+        margin: 7vh 0 0;
     }
+
     #remainingDays {
-        font-size: 110%;
+        font-size: 120%;
         margin-top: -1vh
     }
+
     footer {
         height: 10vh !important;
         overflow: scroll;
         font-size: 1.2vh;
         width: 100vw !important;
     }
-  
+
 }
 
 /* 
@@ -171,12 +196,13 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
-    .mapHolder img{
+
+    .mapHolder img {
         display: flex !important;
         margin: auto;
         height: 55vh
     }
+
     .mapHolder {
         position: absolute;
         display: flex !important;
@@ -184,17 +210,20 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .userInput {
         height: 9vh;
         margin-left: 2vw;
         display: inline-flex
     }
+
     .titles {
         text-align: center;
         margin-top: 6vh;
         flex-direction: column;
         width: 60%;
     }
+
     input {
         height: 6vh;
         width: 40vw !important;
@@ -202,6 +231,7 @@
         justify-self: baseline !important;
         font-size: 2.5vh;
     }
+
     button {
         height: 6.5vh !important;
         width: 10vw !important;
@@ -209,11 +239,13 @@
         border-radius: 10px;
         font-size: 2vh;
     }
+
     button#button:hover {
         background: #419642;
         transform: scale(1.1);
         transition: 0.5s;
     }
+
     .secondLayer {
         text-align: center;
         margin-top: 4vh;
@@ -222,25 +254,29 @@
         top: 1vh;
         right: 2vw;
     }
+
     #remainingNumbers {
         font-size: 240%;
         margin: 3vh 0vw;
     }
-    .SantaMessage{
+
+    .SantaMessage {
         font-size: 140% !important;
-        margin: 7vh 0 0; 
+        margin: 7vh 0 0;
     }
+
     #remainingDays {
-        font-size: 110%;
+        font-size: 120%;
         margin-top: -1vh
     }
+
     footer {
         height: 10vh !important;
         overflow: scroll;
         font-size: 1vh;
         width: 100vw !important;
     }
-  
+
 }
 
 /* 
@@ -249,37 +285,44 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    
+
     .en {
         right: 8vw !important;
         z-index: 10;
     }
+
     .fr {
         right: 2vw !important;
         z-index: 10;
     }
+
     .mapHolder {
-      display: none;
+        display: none;
     }
+
     div {
-        display: grid; 
+        display: grid;
     }
+
     .hat {
         height: 7vh;
         margin-left: 1vw;
     }
+
     .titles {
         text-align: center;
         margin-top: 6vh;
     }
+
     input {
         height: 6vh;
         width: 60vw;
         margin-top: 3vh;
         justify-self: center;
         font-size: 2.5vh;
-        
+
     }
+
     button {
         height: 6vh;
         width: 50vw;
@@ -288,29 +331,35 @@
         justify-self: center;
         font-size: 2vh
     }
+
     button#button:hover {
         background: #419642;
         transform: scale(1.1);
         transition: 0.5s;
     }
+
     .secondLayer {
         text-align: center;
         margin-top: 4vh;
     }
+
     #remainingNumbers {
         font-size: 240%;
     }
-    .SantaMessage{
+
+    .SantaMessage {
         font-size: 174%
     }
+
     #remainingDays {
-        font-size: 110%;
+        font-size: 120%;
         margin-top: -1vh
     }
+
     footer {
         width: 100vw !important;
     }
-  
+
 }
 
 /* 
@@ -321,32 +370,39 @@
 @media (min-width: 481px) and (max-width: 767px) {
     .en {
         right: 9vw !important;
-    }   
+    }
+
     .fr {
         right: 2vw !important;
     }
+
     .en, .fr {
         height: 4vh !important;
         z-index: 10;
     }
+
     .mapHolder {
-      display: none;
+        display: none;
     }
+
     div {
-        display: grid; 
+        display: grid;
     }
+
     .titles {
         text-align: center;
         margin-top: 2vh;
     }
+
     input {
         height: 6vh;
         width: 90vw;
         margin-top: 3vh;
         justify-self: center;
         font-size: 2vh;
-        
+
     }
+
     button {
         height: 5vh;
         width: 70vw;
@@ -355,40 +411,54 @@
         justify-self: center;
         font-size: 2vh
     }
+
     button#button:hover {
         background: #419642;
         transform: scale(1.1);
         transition: 0.5s;
     }
-    #errorMessage{
+
+    #errorMessage {
+        margin-top: 10.5vh;
+        text-align: center;
+    }
+
+    #Example {
         margin-top: 8.5vh;
         text-align: center;
     }
+
     .secondLayer {
         text-align: center;
         margin-top: 4vh;
     }
+
     #remainingNumbers {
         font-size: 202%;
     }
-    .SantaMessage{
+
+    .SantaMessage {
         font-size: 150%
     }
+
     #remainingDays {
-        font-size: 100%;
+        font-size: 120%;
         margin-top: -1vh
     }
+
     .userInput {
         height: 10vh;
         display: block;
         margin-left: auto;
         margin-right: auto
     }
+
     footer {
         font-size: 1.8vh;
         width: 100vw !important;
     }
-    .hat{
+
+    .hat {
         margin-top: 3vh;
     }
 }
@@ -399,36 +469,43 @@
 */
 
 @media (min-width: 438px) and (max-width: 480px) {
-    
+
     .en {
         right: 10vw !important;
     }
+
     .fr {
         right: 1.5vw !important;
     }
+
     .en, .fr {
         height: 4vh !important;
         top: 2vh !important;
         z-index: 10;
     }
+
     .mapHolder {
-      display: none;
+        display: none;
     }
+
     div {
-        display: grid; 
+        display: grid;
     }
+
     .titles {
         text-align: center;
         margin-top: 2vh;
     }
+
     input {
         height: 6vh;
         width: 90vw;
         margin-top: 3vh;
         justify-self: center;
         font-size: 2vh;
-        
+
     }
+
     button {
         height: 5vh;
         width: 70vw;
@@ -438,67 +515,81 @@
         justify-self: center;
         font-size: 2vh
     }
+
     button#button:hover {
         background: #419642;
         transform: scale(1.1);
         transition: 0.5s;
     }
+
     .secondLayer {
         text-align: center;
         margin-top: 4vh;
     }
+
     #remainingNumbers {
         font-size: 202%;
         margin-top: 0
     }
-    .SantaMessage{
+
+    .SantaMessage {
         font-size: 150%;
         margin-top: 10vh;
     }
+
     #remainingDays {
-        font-size: 100%;
+        font-size: 120%;
         margin-top: -1vh
     }
+
     .userInput {
         height: 8vh;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+
     .hat {
         margin-top: 3vh;
         margin-left: 1vw;
 
     }
+
     footer {
         font-size: 1.8vh;
     }
-  
+
 }
 
-@media (max-width: 437px){
-   
+@media (max-width: 437px) {
+
     .en {
         right: 10vw !important;
     }
+
     .fr {
         right: 1.5vw !important;
     }
+
     .en, .fr {
         height: 4vh !important;
         top: 2vh !important;
         z-index: 10;
     }
+
     .mapHolder {
-      display: none;
+        display: none;
     }
+
     div {
-        display: grid; 
+        display: grid;
     }
+
     .titles {
         /* text-align: center; */
         margin-top: 2vh;
     }
+
     input {
         height: 6vh;
         width: 80vw;
@@ -507,6 +598,7 @@
         font-size: 2vh;
         display: block;
     }
+
     button {
         height: 5vh;
         width: 70vw;
@@ -516,43 +608,57 @@
         justify-self: center;
         font-size: 2vh
     }
+
     button#button:hover {
         background: #419642;
         transform: scale(1.1);
         transition: 0.5s;
     }
-    #errorMessage{
+
+    #errorMessage {
+        margin-top: 10.5vh;
+        text-align: center;
+    }
+
+    #Example {
         margin-top: 8.5vh;
         text-align: center;
     }
+
     .secondLayer {
         text-align: center;
         margin-top: 4vh;
     }
+
     #remainingNumbers {
         font-size: 202%;
         margin-top: 0
     }
-    .SantaMessage{
+
+    .SantaMessage {
         font-size: 150%;
         margin-top: 10vh;
     }
+
     #remainingDays {
-        font-size: 100%;
+        font-size: 120%;
         margin-top: -1vh
     }
+
     .userInput {
         height: 8vh;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+
     .hat {
         margin-top: 3vh;
         height: 5vh;
         margin-left: 10vw;
 
     }
+
     footer {
         font-size: 1.8vh;
     }
@@ -599,9 +705,11 @@ footer {
     justify-content: center;
     align-items: flex-end;
 }
-#ALGOSUP{
+
+#ALGOSUP {
     margin-top: -1vh;
 }
+
 /* #feedback, #copyright{
     margin-top: -0.1vh;
 } */
@@ -618,19 +726,19 @@ a {
     /* margin: 0.5vh */
 }
 
-.fr, .en{
+.fr, .en {
     position: absolute;
     height: 5vh;
     top: 3vh;
     z-index: 10;
 }
 
-.fr { 
-    right: 1vw;  
+.fr {
+    right: 1vw;
 }
 
 .en {
-    right: 5vw;  
+    right: 5vw;
 }
 
 .snowflake {
@@ -675,17 +783,26 @@ a {
 
 
 
-footer{
+footer {
     font-size: 1.2vh;
 }
-#errorMessage{
+
+#errorMessage {
     margin-left: 2vw;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: none;
 }
-#userInput{
+
+#Example {
+    margin-left: 2vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+}
+
+#userInput {
     text-align: center;
 }
+
 #here {
     color: red;
     font-size: 30px;

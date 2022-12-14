@@ -124,16 +124,17 @@ function SantArrival(longitude) {
 
 // Change Language
 function Language(language) {
-	var SantaMessage = document.getElementById("Message");
+	var antaMessage = document.getElementById("Message");
 	var input = document.getElementById("userInput");
 	var button = document.getElementById("button");
 	var Remaining = document.getElementById("remainingDays");
 	var feedback = document.getElementById("feedback")
 	var error = document.getElementById("errorMessage")
 	var hat = document.getElementById("hat")
+	var example = document.getElementById("Example")
 	switch (language) {
 		case "FR":
-			SantaMessage.innerHTML = "Le père noël sera là dans:"
+			santaMessage.innerHTML = "Le père noël sera là dans:"
 			input.placeholder = "Écrivez votre ville, votre code postal"
 
 			button.innerHTML = "Rechercher"
@@ -145,9 +146,10 @@ function Language(language) {
 			feedback.innerHTML = "Donnez nous votre avis"
 
 			error.innerHTML = "Nous n'avons pas trouvé votre ville, êtes vous sûr d'avoir utiliser le bon format?"
+			example.innerHTML = "Exemple: Paris, 75000"
 			break;
 		case "UK":
-			SantaMessage.innerHTML = "Santa Claus will be there in"
+			santaMessage.innerHTML = "Santa Claus will be there in"
 			input.placeholder = "Write your city, postal code"
 
 			button.innerHTML = "Search"
@@ -159,6 +161,7 @@ function Language(language) {
 			feedback.innerHTML = "Give us your feedback"
 
 			error.innerHTML = "We can't find your city, are you sure you used the correct format?"
+			example.innerHTML = "Example: Paris, 75000"
 
 
 			break;
