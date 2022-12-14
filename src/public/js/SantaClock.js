@@ -127,7 +127,7 @@ function SantArrival(longitude) {
 
 // Change Language
 function Language(language) {
-	var antaMessage = document.getElementById("Message");
+	var santaMessage = document.getElementById("Message");
 	var input = document.getElementById("userInput");
 	var button = document.getElementById("button");
 	var Remaining = document.getElementById("remainingDays");
