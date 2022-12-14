@@ -670,7 +670,8 @@ body {
     color: #E9E9E9;
     font-family: Montserrat, sans-serif;
     margin: 0px;
-    overflow-x: hidden;
+    overflow: hidden;
+
 }
 
 input {
