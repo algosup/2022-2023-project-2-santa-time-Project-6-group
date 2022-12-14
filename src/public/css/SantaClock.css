@@ -809,3 +809,6 @@ footer {
     z-index: 2;
     display: none;
 }
+.hat{
+    -webkit-user-drag: none;
+}
