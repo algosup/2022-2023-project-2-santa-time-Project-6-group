@@ -23,9 +23,12 @@ async function InitInterval(input) {
 	if (input) {
 		var city = input.split(",")[0]
 		var postcode = input.split(",")[1]
-		postcode = postcode.replaceAll(' ', '');
-		city = city.replaceAll(' ', '');
+		city = city.trim();
+		city = city.replaceAll(' ', '-');
+		postcode = postcode.trim();
+		postcode = postcode.replaceAll(' ', '-');
 
+		console.log(city, postcode)
 		var longitude = async function connect(filters) {
 			var city = 0.000000000;
 			var fetching = await fetch("http://20.229.204.94/api?q=" + filters[0] + "/" + filters[1])
