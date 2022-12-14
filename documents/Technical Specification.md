@@ -13,6 +13,7 @@ written by: Théo Diancourt
       - [Why this project?](#why-this-project)
       - [Schedule](#schedule)
     - [Software](#software)
+      - [Software architecture](#software-architecture)
     - [Risks and Assumptions](#risks-and-assumptions)
     - [Testing](#testing)
       - [Stress testing](#stress-testing)
@@ -45,7 +46,7 @@ This is a simple project that allow us to focus on the deployment part and the p
 
 #### Why this project?
 
-The project is a fun way to learn about the technologies listed above. It is also a good way to know when Santa will precisely come to your house.
+The project is a way to learn about the technologies listed above. It is also a good way to know when Santa will precisely come to your house.
 
 The project need to be entirely finished by the 15th of December 2022 but we are going to deploy it before because we want to test the peak load before Christmas.
 
@@ -61,6 +62,17 @@ The project will be developed in 3 phases:
 ### Software
 
 The software will be implemented by using Node, packaged in a Docker container, deployed to a Kubernetes cluster and hosted on a azure server.  
+
+#### Software architecture 
+
+The software will be composed of 3 main parts:
+- The website
+- The server
+- The database
+
+The request will be sent from the website to the server. The server will then send a request to the database to get the data. The server will then send the data to the website as shown in the following diagram: 
+
+![Software architecture](./images/SoftwareArchitectureDesignChoice.png)
 
 ### Risks and Assumptions
 
@@ -258,4 +270,3 @@ prometheus: Prometheus is an open-source systems monitoring and alerting toolkit
 grafana: Grafana is an open-source platform for monitoring and observability.
 
 responsive design: Responsive web design is an approach to web design aimed at building an optimal viewing experience for users across a wide range of devices (from desktop computer monitors to mobile phones).
-
