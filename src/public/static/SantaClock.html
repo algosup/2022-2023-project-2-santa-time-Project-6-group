@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantaClock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/SantaClock.css">
+</head>
+
+
+<body>
+    <div id="snow"></div>
+    <content>
+        <header>
+            <div class="flags lang">
+                <img id="flag" class="fr" src="/img/FR.png" onclick="Language('FR')">
+                <img id="flag" class="en" src="/img/UK.png" onclick="Language('UK')">
+            </div>
+        </header>
+        <div class="titles">
+            <div class="hatOnText">
+                <img src="/img/hat.png" class="userInput hat" id="hat">
+            </div>
+            <div class="userInput">
+                <input type="text" id="userInput" placeholder="Write your city, postal code" maxlength="70"
+                spellcheck="true" oninput="this.value = this.value.replace(/[^a-zA-Z0-9 ]/g, '')">
+                <button onclick="Search(document.getElementById('userInput').value)" id="button">Search</button>
+            </div>
+            <div id="Example">Example: Paris,75000</div>
+            <div id="errorMessage">We couldn't find your city, are you sure you used the correct format?</div>
+        </div>
+        <div class="secondLayer">
+            
+            <div class="time">
+                <div class="timeLeft">
+                    <p class="SantaMessage" id="Message">Santa Claus will be there in</p>
+                    <p id="remainingNumbers">00 : 00 : 00 : 00</p>
+                    <p id="remainingDays">Days : Hours : Minutes : Seconds</p>
+                    <p id="here"> Santa is here!</p>
+                </div>
+            </div>
+        </div>
+        <div class="mapHolder" id="MapHolder">
+            <img src="/img/Map1.png" id="map" draggable="false">
+        </div>
+        
+        
+        
+        <footer>
+            <div class="footerText">
+                <div class="links">
+                    <a href="https://algosup.com" id="ALGOSUP">ALGOSUP</a>
+                    <a href="/static/Licenses.html">LICENSES</a>
+                    <a href="mailto:santaclock25@gmail.com" id="feedback">Give us your feedback</a>                    
+                </div>
+                <div class="footerNotes">
+                    <!--                    <img src="/img/Santa.png" id="SantaHead">-->
+                    <p id="copyright">© 2022 SantaClock ALGOSUP, Inc</p>
+                </div>
+            </div>
+        </footer>
+    </content>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/SantaClock.js"></script>
+<script src="/js/Snowflakes.js"></script>
+</html>
