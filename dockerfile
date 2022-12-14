@@ -1,13 +1,13 @@
 FROM node:latest
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
-
 COPY . .
 
-EXPOSE 8080
+RUN npm install
 
-CMD [ "node", "index.js" ]
+EXPOSE 80
+
+CMD [ "npm", "run", "deploy" ]
