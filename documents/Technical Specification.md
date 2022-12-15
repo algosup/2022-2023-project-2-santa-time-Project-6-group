@@ -2,8 +2,6 @@
 
 ## Technical Specification
 
-written by: Théo Diancourt 
-
 <details>
 <summary>Table of Contents</summary>
 
@@ -14,12 +12,13 @@ written by: Théo Diancourt
       - [Schedule](#schedule)
     - [Software](#software)
       - [Software architecture](#software-architecture)
+      - [Files structure](#files-structure)
     - [Risks and Assumptions](#risks-and-assumptions)
     - [Testing](#testing)
       - [Stress testing](#stress-testing)
     - [Deployment](#deployment)
       - [Azure](#azure)
-          - [Why this hardware?](#why-this-hardware)
+        - [Why this hardware?](#why-this-hardware)
       - [Kubernetes](#kubernetes)
       - [Docker](#docker)
     - [Monitoring](#monitoring)
@@ -36,6 +35,7 @@ written by: Théo Diancourt
 ### Overview
 
 The goal of the project is to make a prediction of Santa's location based on the current time and the solar time (the exact position of the sun) of the user. The project will be implemented by using these 3 main technologies:
+
 - Node (JavaScript)
 - Docker (Containerization)
 - Kubernetes (Orchestration)
@@ -53,6 +53,7 @@ The project need to be entirely finished by the 15th of December 2022 but we are
 #### Schedule
 
 The project will be developed in 3 phases:
+
 - Phase 1: The server will be setup, we should only have to finish the website and put everything in a docker container (week 2)
 
 - Phase 2: The project will be deployed on a Kubernetes cluster. then hosted on a server. The server will receive the firsts requests from the users. (Week 3)
@@ -63,7 +64,7 @@ The project will be developed in 3 phases:
 
 The software will be implemented by using Node, packaged in a Docker container, deployed to a Kubernetes cluster and hosted on a azure server.  
 
-#### Software architecture 
+#### Software architecture
 
 The software will be composed of 3 main parts:
 - The website
@@ -74,9 +75,43 @@ The request will be sent from the website to the server. The server will then se
 
 ![Software architecture](./images/SoftwareArchitectureDesignChoice.png)
 
+#### Files structure
+
+The files will be structured as follow:
+
+```bash
+.
+├── Dockerfile
+├── README.md
+├── .dockerignore
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── src
+    ├── server.js
+    └── public
+        ├── css
+         ├── 404.css
+         ├── Licenses.css
+         ├── SantaClock.css
+        ├── img
+          ├── all images 
+        ├── js
+          ├── SantaClock.js
+          ├── Snowflakes.js
+        ├── static
+          ├── 404.html
+          ├── Licenses.html
+          ├── SantaClock.html
+```
+
+It is for us the most efficient way to structure the files, Especially since we are using node and docker. 
+
+all the files that are not needed to run the application will be ignored by the docker container in order to make it as small as possible.
+
 ### Risks and Assumptions
 
-There is a risk about giving the wrong location of Santa. Or to give the good location but at the wrong time. 
+There is a risk about giving the wrong location of Santa. Or to give the good location but at the wrong time.
 
 There is another problem about the timestamp. The timestamp will not be based on the time zone of the user. It will be based on the position of the sun so depending on where the user is, the exact moment when Santa will come will be different even if 2 users are in the same time zone.
 
@@ -87,14 +122,16 @@ We should absolutely handle the possible SQL injections and the possible XSS att
 ### Testing
 
 The software will be tested using the following technologies:
+
 - Mocha (unit testing)
 <!-- - Postman (API testing) -->
 
 We are going to test the peak load of the server with 2 different approaches:
+
 - Load testing multiples users at the same time with JMeter
 - Load testing complex operations to simulate numerous users
 
-#### Stress testing 
+#### Stress testing
 
 Since we are going to use azure, we can use the built-in stress testing tool to test the peak load of the server. We can also use the built-in monitoring tool to see the CPU usage and the RAM usage of the server at the same time and adapt the server to support a bigger peak load. 
 
@@ -104,7 +141,7 @@ This project need to be deployed with docker also we want to have as many users 
 
 The website will be hosted on an Azure Server.
 
-#### Azure 
+#### Azure
 
 We have chosen to use the azure container service to deploy our application. It is a managed Kubernetes service that will allow us to deploy our application in a very efficient way, without having to manage the cluster.
 
@@ -119,11 +156,12 @@ For this we have chosen to use a regular Virtual Machine with Ubuntu 20.04 LTS.
 The server will be hosted in France.
 
 The specifications of the server are up to be changed at any point if the need were to arise but currently we are using:
+
 - 2 vCPU
 - 8 GB RAM
 - 50 GB SSD
 
-###### Why this hardware? 
+##### Why this hardware?
 
 | Hardware | Pros | Cons |
 | :---: | :---: | :---: |
@@ -153,7 +191,8 @@ On top of all of that we can also use it to deploy our application on multiple s
 The part of docker in this project is to package the application in a container. With this technology we will be able to deploy the application in any environment. And in this case on a Kubernetes cluster to a cloud server. 
 
 how to build the docker image:
-```dockerfile 
+
+```dockerfile
 # We use the official node image as a base
 FROM node:latest
 
@@ -182,6 +221,7 @@ With this dockerfile we are going to be able to build the docker image and run i
 ### Monitoring
 
 The monitoring of the application will be done using the following technologies:
+
 - Prometheus (Metrics)
 - Grafana (Dashboard)
 
@@ -195,11 +235,12 @@ The goal of the website is to display and give a precise location of Santa claus
 
 #### Frontend
 
-The design of the website will be done in a flat design and with only one page for the content, another one will be done to put the licenses. and a dashboard to display the activity of the application. 
+The design of the website will be done in a flat design and with only one page for the content, another one will be done to put the licenses. and a dashboard to display the activity of the application.
 
-We are also going to make a 404 page to display if the user is trying to access a page that does not exist. 
+We are also going to make a 404 page to display if the user is trying to access a page that does not exist.
 
 The website will have the following features:
+
 - Display the current solar time of the user
 - Display the precise time when Santa Claus will be at the user's location
 - Put an input for the user to enter his postal adress and his country thus we will be able to obtain the most accurate result
@@ -208,14 +249,16 @@ The website will have the following features:
 - Responsive design
 - The time will be displayed in a format like this (DD:HH:MM:SS)
 - The website will be available in English and French
+- Snow effect on the website
 
 #### Backend
 
-The web part will be handled by the module express. The module will be used to handle the requests from the users and to send the data to the frontend. 
+The web part will be handled by the module express. The module will be used to handle the requests from the users and to send the data to the frontend.
 
 The backend will have the following features:
+
 - Handle the requests from the users
-- Retrieve the data that the user entered 
+- Retrieve the data that the user entered
 - Send the data to the database
 - Send the data to the frontend
 
@@ -240,11 +283,12 @@ We also have access to another database based on [openstreetmap](https://www.ope
 | JSON file | - Easy to use <br> - Small <br> - Hosted on the same server | - Not accurate <br> - Not updated regularly |
 
 The database will have the following features:
+
 - Store all the postal adresses
 - Store the latitude and longitude of the postal adresses
 - Store the country of the postal adresses
 
-### Possible improvements 
+### Possible improvements
 
 - Add a feature to move Santa Clause on the map
 - Make the website available in more languages
@@ -252,6 +296,8 @@ The database will have the following features:
 - Add more design to the website (animations, etc...)
 
 ### Footnotes
+
+Azure: Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.
 
 node: Node is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
