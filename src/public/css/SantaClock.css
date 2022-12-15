@@ -669,7 +669,9 @@ body {
     background-color: #5ac05b;
     color: #E9E9E9;
     font-family: Montserrat, sans-serif;
-    margin: 0px
+    margin: 0px;
+    overflow: hidden;
+
 }
 
 input {
@@ -808,4 +810,7 @@ footer {
     font-size: 30px;
     z-index: 2;
     display: none;
+}
+.hat{
+    -webkit-user-drag: none;
 }
